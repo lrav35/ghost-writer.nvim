@@ -1,6 +1,13 @@
 local M = {}
-local augroup = vim.api.nvim_create_augroup("ScratchBuffer", { clear = true })
 local http = require("plenary.job")
+
+local function get_state(state)
+	if state then
+		print("buf_id: " .. state.buf .. " win_id: " .. state.win)
+	else
+		print(nil)
+	end
+end
 
 function M.make_request(tokens)
 	local req = string.format('{"message":"%s"}', tokens)
@@ -26,50 +33,69 @@ function M.make_request(tokens)
 	}):start()
 end
 
-function M.run()
-	M.open_chat_window()
-	M.make_request()
-end
+function M.state_manager()
+	print("manager being called...")
+	local context = nil
 
-function M.open_chat_window()
-	local buffer = vim.api.nvim_create_buf(false, true)
-	local start_message = "hello, how can I assist you?"
+	local function create_win_and_buf()
+		if not context then
+			local buffer = vim.api.nvim_create_buf(false, true)
+			local start_message = "hello, how can I assist you?"
 
-	vim.cmd("75vsplit")
-	local win = vim.api.nvim_get_current_win()
-	vim.api.nvim_win_set_buf(win, buffer)
+			vim.cmd("75vsplit")
+			local window = vim.api.nvim_get_current_win()
+			vim.api.nvim_win_set_buf(window, buffer)
 
-	vim.bo[buffer].buftype = "nofile"
-	vim.bo[buffer].bufhidden = "wipe"
-	vim.bo[buffer].swapfile = false
-	vim.bo[buffer].filetype = "markdown"
+			vim.bo[buffer].buftype = "nofile"
+			vim.bo[buffer].bufhidden = "wipe"
+			vim.bo[buffer].swapfile = false
+			vim.bo[buffer].filetype = "markdown"
 
-	vim.wo[win].relativenumber = false
+			vim.wo[window].relativenumber = false
 
-	vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { start_message })
+			vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { start_message })
 
-	vim.api.nvim_create_autocmd("InsertEnter", {
+			vim.api.nvim_create_autocmd("InsertEnter", {
+				group = vim.api.nvim_create_augroup("NotePanel", { clear = true }),
+				callback = function()
+					if vim.api.nvim_get_current_buf() == buffer then
+						local lines = vim.api.nvim_buf_get_lines(buffer, 0, -1, false)
+						if #lines == 1 and lines[1] == start_message then
+							vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { "" })
+						end
+					end
+				end,
+			})
 
-		group = vim.api.nvim_create_augroup("NotePanel", { clear = true }),
-		callback = function()
-			-- TODO: this doesnt really work the way i want it to, getting invalid buffer id warnings
-			local lines = vim.api.nvim_buf_get_lines(buffer, 0, -1, false)
-			if #lines == 1 and lines[1] == start_message then
-				vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { "" })
+			context = { buf = buffer, win = window }
+		end
+	end
+
+	local function destroy()
+		if context then
+			if vim.api.nvim_buf_is_valid(context.buf) and vim.api.nvim_win_is_valid(context.win) then
+				vim.api.nvim_buf_delete(context.buf, { force = true })
+				return nil
 			end
-		end,
-	})
+		end
+	end
 
-	vim.api.nvim_set_current_win(win)
+	return {
+		open = function()
+			create_win_and_buf()
+			get_state(context)
+		end,
+		close = function()
+			context = destroy()
+		end,
+	}
 end
 
 function M.setup()
-	vim.api.nvim_create_autocmd("VimEnter", {
-		group = augroup,
-		desc = "set a scratch buffer on load",
-		once = true,
-		callback = M.run,
-	})
+	local manager = M.state_manager()
+
+	vim.keymap.set("n", "<leader>wo", manager.open, { desc = "[W]indow [O]pen Chat", noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>wc", manager.close, { desc = "[W]indow [C]lose", noremap = true, silent = true })
 end
 
 return M
