@@ -1,16 +1,59 @@
 local M = {}
 local http = require("plenary.job")
 
-local function get_state(state)
-	if state then
-		print("buf_id: " .. state.buf .. " win_id: " .. state.win)
-	else
-		print(nil)
-	end
+local function waiting(buf)
+	local char_seq = { "\\", "-", "/" }
+
+	local timer = vim.loop.new_timer()
+	local index = 1
+
+	timer:start(
+		0,
+		200,
+		vim.schedule_wrap(function()
+			if vim.api.nvim_buf_is_valid(buf) then
+				local line_count = vim.api.nvim_buf_line_count(buf)
+				print(line_count)
+				local new_line_idx = line_count - 1
+				vim.api.nvim_buf_set_lines(buf, 2, new_line_idx + 1, false, { char_seq[index] })
+
+				index = index % #char_seq + 1
+			end
+		end)
+	)
+
+	return timer
 end
 
-function M.make_request(tokens)
+function M.parse_message(buf, result, waiting_task)
+	vim.schedule(function()
+		if waiting_task then
+			local line_count = vim.api.nvim_buf_line_count(buf)
+			vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "" })
+			waiting_task:stop()
+			waiting_task:close()
+		end
+
+		if vim.api.nvim_buf_is_valid(buf) then
+			local response = table.concat(result, "\n")
+
+			local success, res_json = pcall(vim.json.decode, response)
+			if success and res_json and res_json.message then
+				local message = res_json.message
+
+				local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
+				local line_count = #lines
+
+				vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", message })
+			end
+		end
+	end)
+end
+
+function M.make_request(tokens, buf)
 	local req = string.format('{"message":"%s"}', tokens)
+
+	local waiting_task = waiting(buf)
 	http:new({
 		command = "curl",
 		args = {
@@ -18,23 +61,23 @@ function M.make_request(tokens)
 			"POST",
 			"http://localhost:8000/test",
 			"-H",
-			"Content-Type: applicatoin/json",
+			"Content-Type: application/json",
 			"-d",
 			req,
 		},
 		on_exit = function(job, return_val)
 			if return_val == 0 then
 				local result = job:result()
-				print(table.concat(result, "\n"))
+				M.parse_message(buf, result, waiting_task)
 			else
-				print("Request failed")
+				print("request failed :(")
 			end
 		end,
 	}):start()
 end
 
 function M.state_manager()
-	print("manager being called...")
+	print("loading plugin...")
 	local context = nil
 
 	local function create_win_and_buf()
@@ -80,13 +123,23 @@ function M.state_manager()
 		end
 	end
 
+	local function request()
+		if context and vim.api.nvim_buf_is_valid(context.buf) then
+			local lines = vim.api.nvim_buf_get_lines(context.buf, 0, -1, false)
+			local message = table.concat(lines, "\n")
+			M.make_request(message, context.buf)
+		end
+	end
+
 	return {
 		open = function()
 			create_win_and_buf()
-			get_state(context)
 		end,
 		close = function()
 			context = destroy()
+		end,
+		prompt = function()
+			request()
 		end,
 	}
 end
@@ -96,6 +149,7 @@ function M.setup()
 
 	vim.keymap.set("n", "<leader>wo", manager.open, { desc = "[W]indow [O]pen Chat", noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>wc", manager.close, { desc = "[W]indow [C]lose", noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>p", manager.prompt, { desc = "[P]rompt", noremap = true, silent = true })
 end
 
 return M
