@@ -12,11 +12,18 @@ local function waiting(buf)
 		200,
 		vim.schedule_wrap(function()
 			if vim.api.nvim_buf_is_valid(buf) then
-				local line_count = vim.api.nvim_buf_line_count(buf)
-				print(line_count)
-				local new_line_idx = line_count - 1
-				vim.api.nvim_buf_set_lines(buf, 2, new_line_idx + 1, false, { char_seq[index] })
+				local cursor_pos = vim.api.nvim_win_get_cursor(0)
+				local line_idx = cursor_pos[1] + 2
 
+				-- Ensure the line exists
+				local line_count = vim.api.nvim_buf_line_count(buf)
+				if line_idx > line_count then
+					-- Add lines if necessary
+					vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", "" })
+				end
+
+				-- Set the spinner two lines below the cursor
+				vim.api.nvim_buf_set_lines(buf, line_idx - 1, line_idx, false, { char_seq[index] })
 				index = index % #char_seq + 1
 			end
 		end)
@@ -43,15 +50,22 @@ function M.parse_message(buf, result, waiting_task)
 
 				local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
 				local line_count = #lines
+				print(line_count)
 
-				vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", message })
+				vim.api.nvim_buf_set_lines(buf, line_count - 2, line_count, false, { message })
 			end
 		end
 	end)
 end
 
 function M.make_request(tokens, buf)
-	local req = string.format('{"message":"%s"}', tokens)
+	local json_data = { message = tokens }
+
+	local req, err = vim.json.encode(json_data)
+	if not req then
+		print("Error encoding JSON", err)
+		return
+	end
 
 	local waiting_task = waiting(buf)
 	http:new({
@@ -77,7 +91,6 @@ function M.make_request(tokens, buf)
 end
 
 function M.state_manager()
-	print("loading plugin...")
 	local context = nil
 
 	local function create_win_and_buf()
@@ -85,7 +98,7 @@ function M.state_manager()
 			local buffer = vim.api.nvim_create_buf(false, true)
 			local start_message = "hello, how can I assist you?"
 
-			vim.cmd("75vsplit")
+			vim.cmd("70vsplit")
 			local window = vim.api.nvim_get_current_win()
 			vim.api.nvim_win_set_buf(window, buffer)
 
