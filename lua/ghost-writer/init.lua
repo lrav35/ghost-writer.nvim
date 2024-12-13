@@ -1,5 +1,8 @@
 local M = {}
-local http = require("plenary.job")
+local Job = require("plenary.job")
+
+local helpful_prompt =
+	"you are a helpful assistant, what I am sending you may be notes, code or context provided by our previous conversation"
 
 local function waiting(buf)
 	local char_seq = { "\\", "-", "/" }
@@ -15,14 +18,11 @@ local function waiting(buf)
 				local cursor_pos = vim.api.nvim_win_get_cursor(0)
 				local line_idx = cursor_pos[1] + 2
 
-				-- Ensure the line exists
 				local line_count = vim.api.nvim_buf_line_count(buf)
 				if line_idx > line_count then
-					-- Add lines if necessary
 					vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", "" })
 				end
 
-				-- Set the spinner two lines below the cursor
 				vim.api.nvim_buf_set_lines(buf, line_idx - 1, line_idx, false, { char_seq[index] })
 				index = index % #char_seq + 1
 			end
@@ -42,23 +42,71 @@ function M.parse_message(buf, result, waiting_task)
 		end
 
 		if vim.api.nvim_buf_is_valid(buf) then
-			local response = table.concat(result, "\n")
+			local current_window = vim.api.nvim_get_current_win()
 
-			local success, res_json = pcall(vim.json.decode, response)
-			if success and res_json and res_json.message then
-				local message = res_json.message
+			local cursor_position = vim.api.nvim_win_get_cursor(current_window)
+			local row, col = cursor_position[1], cursor_position[2]
 
-				local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
-				local line_count = #lines
-				print(line_count)
-
-				vim.api.nvim_buf_set_lines(buf, line_count - 2, line_count, false, { message })
-			end
+			local lines = vim.split(result, "\n")
+			vim.cmd("undojoin")
+			vim.api.nvim_put(lines, "c", true, true)
+			local num_lines = #lines
+			local last_line_length = #lines[num_lines]
+			vim.api.nvim_win_set_cursor(current_window, { row + num_lines - 1, col + last_line_length })
 		end
 	end)
 end
 
-function M.make_request(tokens, buf)
+local anthropic_opts = {
+	url = "https://api.anthropic.com/v1/messages",
+	model = "claude-3-5-sonnet-20241022",
+
+	api_key_name = "ANTHROPIC_API_KEY",
+	system_prompt = helpful_prompt,
+	replace = false,
+}
+
+function M.get_anthropic_specific_args(opts, prompt)
+	local url = opts.url
+	local system_prompt = opts.system_prompt
+	--TODO: make this a env variable
+	local api_key = opts.api_key_name and "REDACTED"
+
+	local data = {
+		messages = { { role = "system", content = system_prompt }, { role = "user", content = prompt } },
+		model = opts.model,
+		stream = true,
+	}
+	local args = { "-N", "-X", "POST", "-H", "Content-Type: application/json", "-d", vim.json.encode(data) }
+	if api_key then
+		table.insert(args, "-H")
+		table.insert(args, "Authorization: Bearer " .. api_key)
+	end
+	table.insert(args, url)
+	return args
+end
+
+function M.anthropic_spec_data(stream, state, buf, task)
+	if state == "event_block_delta" then
+		local json = vim.json.decode(stream)
+		if json.delta and json.delta.text then
+			print("got here")
+			M.parse_message(buf, json.delta.text, task)
+		end
+	end
+end
+
+local group = vim.api.nvim_create_augroup("sup", { clear = true })
+local active_job = nil
+
+function M.make_request(tokens, opts, curl_args_fn, buf)
+	vim.api.nvim_clear_autocmds({ group = group })
+	local prompt = tokens
+	local system_prompt = opts.system_prompt
+	local args = curl_args_fn(opts, prompt, system_prompt)
+	print(vim.inspect(args))
+	local curr_event_state = nil
+
 	local json_data = { message = tokens }
 
 	local req, err = vim.json.encode(json_data)
@@ -68,26 +116,69 @@ function M.make_request(tokens, buf)
 	end
 
 	local waiting_task = waiting(buf)
-	http:new({
+
+	local function parse_and_call(result)
+		local event = result:match("^event: (.+)$")
+		if event then
+			curr_event_state = event
+			return
+		end
+		local data_match = result:match("^data: (.+)$")
+		if data_match then
+			M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
+		end
+	end
+
+	if active_job then
+		active_job:shutdown()
+		active_job = nil
+	end
+
+	local function log_error_to_file(data)
+		local log_file = "error_log.txt" -- Specify the log file path
+		local file, err = io.open(log_file, "a") -- Open the file in append mode
+
+		if not file then
+			print("Failed to open log file:", err)
+			return
+		end
+
+		file:write(os.date("[%Y-%m-%d %H:%M:%S]"), " ", data, "\n") -- Write timestamp and error message
+		file:close() -- Close the file
+	end
+
+	active_job = Job:new({
 		command = "curl",
-		args = {
-			"-X",
-			"POST",
-			"http://localhost:8000/test",
-			"-H",
-			"Content-Type: application/json",
-			"-d",
-			req,
-		},
-		on_exit = function(job, return_val)
-			if return_val == 0 then
-				local result = job:result()
-				M.parse_message(buf, result, waiting_task)
-			else
-				print("request failed :(")
+		args = { "-s", "-v", args },
+		on_stdout = function(_, out)
+			--TODO: handle streaming now, this wont work yet
+			parse_and_call(out)
+		end,
+		on_stderr = function(_, data)
+			print("failed, printing to error_log.txt")
+			log_error_to_file(data)
+		end,
+		on_exit = function()
+			active_job = nil
+		end,
+	})
+
+	active_job:start()
+
+	vim.api.nvim_create_autocmd("User", {
+		group = group,
+		pattern = "DING_LLM_Escape",
+		callback = function()
+			if active_job then
+				active_job:shutdown()
+				print("LLM streaming cancelled")
+				active_job = nil
 			end
 		end,
-	}):start()
+	})
+
+	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User DING_LLM_Escape<CR>", { noremap = true, silent = true })
+	return active_job
 end
 
 function M.state_manager()
@@ -140,7 +231,7 @@ function M.state_manager()
 		if context and vim.api.nvim_buf_is_valid(context.buf) then
 			local lines = vim.api.nvim_buf_get_lines(context.buf, 0, -1, false)
 			local message = table.concat(lines, "\n")
-			M.make_request(message, context.buf)
+			M.make_request(message, anthropic_opts, M.get_anthropic_specific_args, context.buf)
 		end
 	end
 
