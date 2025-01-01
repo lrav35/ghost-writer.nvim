@@ -4,6 +4,18 @@ local Job = require("plenary.job")
 local helpful_prompt =
 	"you are a helpful assistant, what I am sending you may be notes, code or context provided by our previous conversation"
 
+local function log_to_file(data, prefix)
+	local log_file = io.open("curl_debug.log", "a")
+	if log_file then
+		log_file:write(os.date("[%Y-%m-%d %H:%M:%S] ") .. prefix .. ": " .. vim.inspect(data) .. "\n")
+		log_file:close()
+	end
+end
+
+local function get_api_key(name)
+	return os.getenv(name)
+end
+
 local function waiting(buf)
 	local char_seq = { "\\", "-", "/" }
 
@@ -28,7 +40,6 @@ local function waiting(buf)
 			end
 		end)
 	)
-
 	return timer
 end
 
@@ -41,15 +52,24 @@ function M.parse_message(buf, result, waiting_task)
 			waiting_task:close()
 		end
 
-		if vim.api.nvim_buf_is_valid(buf) then
-			local current_window = vim.api.nvim_get_current_win()
+		if not vim.api.nvim_buf_is_valid(buf) then
+			return
+		end
 
-			local cursor_position = vim.api.nvim_win_get_cursor(current_window)
-			local row, col = cursor_position[1], cursor_position[2]
+		local current_window = vim.api.nvim_get_current_win()
+		local cursor_position = vim.api.nvim_win_get_cursor(current_window)
+		local row, col = cursor_position[1], cursor_position[2]
 
-			local lines = vim.split(result, "\n")
-			vim.cmd("undojoin")
-			vim.api.nvim_put(lines, "c", true, true)
+		local text = result
+		if type(result) == "table" then
+			text = table.concat(result, "\n")
+		end
+
+		vim.cmd("undojoin")
+		vim.api.nvim_put({ text }, "c", true, true)
+
+		local lines = vim.split(result, "\n")
+		if #lines > 1 then
 			local num_lines = #lines
 			local last_line_length = #lines[num_lines]
 			vim.api.nvim_win_set_cursor(current_window, { row + num_lines - 1, col + last_line_length })
@@ -68,22 +88,35 @@ local anthropic_opts = {
 
 function M.get_anthropic_specific_args(opts, prompt)
 	local url = opts.url
-	local system_prompt = opts.system_prompt
 	--TODO: make this a env variable
-	local api_key = opts.api_key_name and "REDACTED"
+	local api_key = opts.api_key_name and get_api_key("ANTHROPIC_API_KEY")
 
 	local data = {
-		messages = { { role = "system", content = system_prompt }, { role = "user", content = prompt } },
+		system = opts.system_prompt,
+		messages = { { role = "user", content = prompt } },
 		model = opts.model,
 		stream = true,
 	}
-	local args = { "-N", "-X", "POST", "-H", "Content-Type: application/json", "-d", vim.json.encode(data) }
-	if api_key then
-		table.insert(args, "-H")
-		table.insert(args, "Authorization: Bearer " .. api_key)
-	end
-	table.insert(args, url)
-	return args
+
+	log_to_file(vim.inspect(data), "REQUEST_DATA")
+
+	return {
+		"--no-buffer",
+		"--trace-ascii",
+		"trace.log",
+		"-N",
+		"-v",
+		"-s",
+		url,
+		"-H",
+		"Content-Type: application/json",
+		"-H",
+		"anthropic-version: 2023-06-01",
+		"-H",
+		"x-api-key: " .. api_key,
+		"-d",
+		vim.json.encode(data),
+	}
 end
 
 function M.anthropic_spec_data(stream, state, buf, task)
@@ -101,10 +134,6 @@ local active_job = nil
 
 function M.make_request(tokens, opts, curl_args_fn, buf)
 	vim.api.nvim_clear_autocmds({ group = group })
-	local prompt = tokens
-	local system_prompt = opts.system_prompt
-	local args = curl_args_fn(opts, prompt, system_prompt)
-	print(vim.inspect(args))
 	local curr_event_state = nil
 
 	local json_data = { message = tokens }
@@ -118,8 +147,10 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 	local waiting_task = waiting(buf)
 
 	local function parse_and_call(result)
+		print("got to parse and call")
 		local event = result:match("^event: (.+)$")
 		if event then
+			print("event")
 			curr_event_state = event
 			return
 		end
@@ -134,31 +165,36 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 		active_job = nil
 	end
 
-	local function log_error_to_file(data)
-		local log_file = "error_log.txt" -- Specify the log file path
-		local file, err = io.open(log_file, "a") -- Open the file in append mode
-
-		if not file then
-			print("Failed to open log file:", err)
-			return
-		end
-
-		file:write(os.date("[%Y-%m-%d %H:%M:%S]"), " ", data, "\n") -- Write timestamp and error message
-		file:close() -- Close the file
+	local curl_test = io.popen("which curl")
+	if curl_test then
+		local curl_path = curl_test:read("*a")
+		curl_test:close()
+		log_to_file(curl_path, "CURL_PATH")
 	end
+
+	local local_args = curl_args_fn(opts, tokens)
+	log_to_file("curl " .. table.concat(local_args, " "), "COMMAND") --
 
 	active_job = Job:new({
 		command = "curl",
-		args = { "-s", "-v", args },
-		on_stdout = function(_, out)
-			--TODO: handle streaming now, this wont work yet
-			parse_and_call(out)
+		args = curl_args_fn(opts, tokens),
+		on_stdout = function(_, data)
+			log_to_file(data, "STDOUT")
+			print("data?.. " .. data)
+			if data then
+				parse_and_call(data)
+			end
 		end,
 		on_stderr = function(_, data)
+			log_to_file(data, "STDERROR")
 			print("failed, printing to error_log.txt")
-			log_error_to_file(data)
 		end,
-		on_exit = function()
+		on_exit = function(_, data)
+			log_to_file(data, "EXIT CODE")
+			if waiting_task then
+				waiting_task:stop()
+				waiting_task:close()
+			end
 			active_job = nil
 		end,
 	})
