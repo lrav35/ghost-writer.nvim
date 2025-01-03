@@ -13,7 +13,11 @@ local function log_to_file(data, prefix)
 end
 
 local function get_api_key(name)
-	return os.getenv(name)
+	if os.getenv(name) then
+		return os.getenv(name)
+	else
+		return "not there, mate"
+	end
 end
 
 local function waiting(buf)
@@ -88,7 +92,6 @@ local anthropic_opts = {
 
 function M.get_anthropic_specific_args(opts, prompt)
 	local url = opts.url
-	--TODO: make this a env variable
 	local api_key = opts.api_key_name and get_api_key("ANTHROPIC_API_KEY")
 
 	local data = {
@@ -99,6 +102,8 @@ function M.get_anthropic_specific_args(opts, prompt)
 	}
 
 	log_to_file(vim.inspect(data), "REQUEST_DATA")
+
+	local json_data = vim.json.encode(data)
 
 	return {
 		"--no-buffer",
@@ -115,7 +120,7 @@ function M.get_anthropic_specific_args(opts, prompt)
 		"-H",
 		"x-api-key: " .. api_key,
 		"-d",
-		vim.json.encode(data),
+		json_data,
 	}
 end
 
