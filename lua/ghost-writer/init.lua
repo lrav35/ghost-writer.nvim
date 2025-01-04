@@ -96,6 +96,7 @@ function M.get_anthropic_specific_args(opts, prompt)
 
 	local data = {
 		system = opts.system_prompt,
+		max_tokens = 256,
 		messages = { { role = "user", content = prompt } },
 		model = opts.model,
 		stream = true,
@@ -103,32 +104,34 @@ function M.get_anthropic_specific_args(opts, prompt)
 
 	log_to_file(vim.inspect(data), "REQUEST_DATA")
 
-	local json_data = vim.json.encode(data)
+	local json_data = "'" .. vim.json.encode(data) .. "'"
 
-	return {
+	local args = {
 		"--no-buffer",
-		"--trace-ascii",
-		"trace.log",
 		"-N",
-		"-v",
 		"-s",
+		"-X",
+		"POST",
 		url,
 		"-H",
-		"Content-Type: application/json",
+		[["Content-Type: application/json"]], -- Using Lua's double brackets for literal string
 		"-H",
-		"anthropic-version: 2023-06-01",
+		[["anthropic-version: 2023-06-01"]],
 		"-H",
-		"x-api-key: " .. api_key,
+		string.format([["x-api-key: %s"]], api_key),
 		"-d",
 		json_data,
 	}
+
+	return args
 end
 
 function M.anthropic_spec_data(stream, state, buf, task)
+	print("reached spec data")
 	if state == "event_block_delta" then
 		local json = vim.json.decode(stream)
 		if json.delta and json.delta.text then
-			print("got here")
+			log_to_file(json.delta.text, "STDOUT")
 			M.parse_message(buf, json.delta.text, task)
 		end
 	end
@@ -140,71 +143,109 @@ local active_job = nil
 function M.make_request(tokens, opts, curl_args_fn, buf)
 	vim.api.nvim_clear_autocmds({ group = group })
 	local curr_event_state = nil
-
-	local json_data = { message = tokens }
-
-	local req, err = vim.json.encode(json_data)
-	if not req then
-		print("Error encoding JSON", err)
-		return
-	end
-
 	local waiting_task = waiting(buf)
 
-	local function parse_and_call(result)
-		print("got to parse and call")
-		local event = result:match("^event: (.+)$")
-		if event then
-			print("event")
-			curr_event_state = event
-			return
-		end
-		local data_match = result:match("^data: (.+)$")
-		if data_match then
-			M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
-		end
-	end
+	-- local function parse_and_call(result)
+	-- 	print("got to parse and call")
+	-- 	local event = result:match("^event: (.+)$")
+	-- 	if event then
+	-- 		print("event")
+	-- 		curr_event_state = event
+	-- 		return
+	-- 	end
+	-- 	local data_match = result:match("^data: (.+)$")
+	-- 	if data_match then
+	-- 		M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
+	-- 	end
+	-- end
 
 	if active_job then
 		active_job:shutdown()
 		active_job = nil
 	end
 
-	local curl_test = io.popen("which curl")
-	if curl_test then
-		local curl_path = curl_test:read("*a")
-		curl_test:close()
-		log_to_file(curl_path, "CURL_PATH")
-	end
-
+	-- remove
 	local local_args = curl_args_fn(opts, tokens)
-	log_to_file("curl " .. table.concat(local_args, " "), "COMMAND") --
+	-- Debug prints before job creation
+	print("Debug: About to create job")
+	print("Debug: Command args:", vim.inspect(local_args))
+
+	-- Create a log file for debugging
+	local debug_file = io.open("debug.log", "a")
+	if debug_file then
+		debug_file:write("\n--- New Request ---\n")
+		debug_file:write(os.date() .. "\n")
+		debug_file:write("Args: " .. vim.inspect(local_args) .. "\n")
+		debug_file:close()
+	end
 
 	active_job = Job:new({
 		command = "curl",
 		args = curl_args_fn(opts, tokens),
 		on_stdout = function(_, data)
-			log_to_file(data, "STDOUT")
-			print("data?.. " .. data)
-			if data then
-				parse_and_call(data)
+			-- Write to debug file immediately
+			local debug_file = io.open("debug.log", "a")
+			if debug_file then
+				debug_file:write("STDOUT: " .. vim.inspect(data) .. "\n")
+				debug_file:close()
 			end
+
+			if data then
+				for line in data:gmatch("[^\r\n]+") do
+					local event = line:match("^event: (.+)$")
+					if event then
+						curr_event_state = event
+						print("Debug: Found event:", event)
+					else
+						local data_match = line:match("^data: (.+)$")
+						if data_match then
+							print("Debug: Found data match:", data_match)
+							M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
+						end
+					end
+				end
+			end
+
+			-- log_to_file(data, "STDOUT")
+			-- print("data?.. " .. data)
+			-- if data then
+			-- 	parse_and_call(data)
+			-- end
 		end,
 		on_stderr = function(_, data)
+			-- Write to debug file immediately
+			local debug_file = io.open("debug.log", "a")
+			if debug_file then
+				debug_file:write("STDERR: " .. vim.inspect(data) .. "\n")
+				debug_file:close()
+			end
+
+			print("Debug: Received stderr:", vim.inspect(data))
 			log_to_file(data, "STDERROR")
-			print("failed, printing to error_log.txt")
 		end,
-		on_exit = function(_, data)
-			log_to_file(data, "EXIT CODE")
+		on_exit = function(_, code)
+			-- Write to debug file immediately
+			local debug_file = io.open("debug.log", "a")
+			if debug_file then
+				debug_file:write("Exit code: " .. tostring(code) .. "\n")
+				debug_file:close()
+			end
+
+			print("Debug: Job exited with code:", code)
+			log_to_file(code, "EXIT CODE")
 			if waiting_task then
 				waiting_task:stop()
 				waiting_task:close()
 			end
 			active_job = nil
 		end,
+		stdout_buffered = false, -- Ensure stdout isn't buffered
+		stderr_buffered = false, -- Ensure stderr isn't buffered
 	})
 
+	print("Debug: Starting job")
 	active_job:start()
+	print("Debug: Job started")
 
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
