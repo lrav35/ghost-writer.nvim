@@ -50,7 +50,6 @@ function M.parse_message(buf, result, waiting_task)
 		local line_count = vim.api.nvim_buf_line_count(buf)
 		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
 
-		-- Check if last line is a spinner character
 		if last_line:match("^[/-\\]$") then
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { "" })
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { result })
@@ -129,6 +128,8 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 		active_job = nil
 	end
 
+	local local_args = curl_args_fn(opts, tokens)
+
 	-- Debug file setup
 	local function write_debug(message)
 		local debug_file = io.open("debug.log", "a")
@@ -140,15 +141,26 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 
 	active_job = Job:new({
 		command = "curl",
-		args = curl_args_fn(opts, tokens),
+		args = local_args,
 		on_stdout = function(_, data)
 			if data then
+				write_debug("STDOUT: " .. vim.inspect(data))
+
+				local success, json_data = pcall(vim.json.decode, data)
+				if success then
+					write_debug("Parsed JSON: " .. vim.inspect(json_data))
+				end
+
 				local event = data:match("^event: (.+)$")
 				if event then
 					curr_event_state = event
+					write_debug("Found event: " .. event)
 				else
 					local data_match = data:match("^data: (.+)$")
 					if data_match then
+						write_debug(
+							"Found data match: " .. data_match .. " with current_event_state: " .. curr_event_state
+						)
 						M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
 					end
 				end
@@ -165,19 +177,21 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 		stderr_buffered = false,
 	})
 
+	active_job:start()
+
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
-		pattern = "Prompt_Escape",
+		pattern = "DING_LLM_Escape",
 		callback = function()
 			if active_job then
 				active_job:shutdown()
-				print("model streaming cancelled")
+				print("LLM streaming cancelled")
 				active_job = nil
 			end
 		end,
 	})
 
-	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User Prompt_Escape<CR>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User DING_LLM_Escape<CR>", { noremap = true, silent = true })
 	return active_job
 end
 
