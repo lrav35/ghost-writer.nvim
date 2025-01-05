@@ -4,14 +4,6 @@ local Job = require("plenary.job")
 local helpful_prompt =
 	"you are a helpful assistant, what I am sending you may be notes, code or context provided by our previous conversation"
 
-local function log_to_file(data, prefix)
-	local log_file = io.open("curl_debug.log", "a")
-	if log_file then
-		log_file:write(os.date("[%Y-%m-%d %H:%M:%S] ") .. prefix .. ": " .. vim.inspect(data) .. "\n")
-		log_file:close()
-	end
-end
-
 local function get_api_key(name)
 	if os.getenv(name) then
 		return os.getenv(name)
@@ -19,6 +11,8 @@ local function get_api_key(name)
 		return "not there, mate"
 	end
 end
+
+local waiting_states = {}
 
 local function waiting(buf)
 	local char_seq = { "\\", "-", "/" }
@@ -49,34 +43,20 @@ end
 
 function M.parse_message(buf, result, waiting_task)
 	vim.schedule(function()
-		if waiting_task then
-			local line_count = vim.api.nvim_buf_line_count(buf)
-			vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "" })
-			waiting_task:stop()
-			waiting_task:close()
-		end
-
 		if not vim.api.nvim_buf_is_valid(buf) then
 			return
 		end
 
-		local current_window = vim.api.nvim_get_current_win()
-		local cursor_position = vim.api.nvim_win_get_cursor(current_window)
-		local row, col = cursor_position[1], cursor_position[2]
+		local line_count = vim.api.nvim_buf_line_count(buf)
+		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
 
-		local text = result
-		if type(result) == "table" then
-			text = table.concat(result, "\n")
-		end
-
-		vim.cmd("undojoin")
-		vim.api.nvim_put({ text }, "c", true, true)
-
-		local lines = vim.split(result, "\n")
-		if #lines > 1 then
-			local num_lines = #lines
-			local last_line_length = #lines[num_lines]
-			vim.api.nvim_win_set_cursor(current_window, { row + num_lines - 1, col + last_line_length })
+		-- Check if last line is a spinner character
+		if last_line:match("^[/-\\]$") then
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { "" })
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { result })
+		else
+			local current_response = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { current_response .. result })
 		end
 	end)
 end
@@ -102,37 +82,36 @@ function M.get_anthropic_specific_args(opts, prompt)
 		stream = true,
 	}
 
-	log_to_file(vim.inspect(data), "REQUEST_DATA")
-
-	local json_data = "'" .. vim.json.encode(data) .. "'"
+	local json_data = vim.json.encode(data)
 
 	local args = {
 		"--no-buffer",
 		"-N",
-		"-s",
-		"-X",
-		"POST",
 		url,
 		"-H",
-		[["Content-Type: application/json"]], -- Using Lua's double brackets for literal string
+		"Content-Type: application/json",
 		"-H",
-		[["anthropic-version: 2023-06-01"]],
+		"anthropic-version: 2023-06-01",
 		"-H",
-		string.format([["x-api-key: %s"]], api_key),
+		string.format("x-api-key: %s", api_key),
 		"-d",
 		json_data,
 	}
-
 	return args
 end
 
 function M.anthropic_spec_data(stream, state, buf, task)
-	print("reached spec data")
-	if state == "event_block_delta" then
-		local json = vim.json.decode(stream)
-		if json.delta and json.delta.text then
-			log_to_file(json.delta.text, "STDOUT")
-			M.parse_message(buf, json.delta.text, task)
+	if state == "content_block_delta" then
+		local task_id = tostring(task)
+		if task and not waiting_states[task_id] then
+			task:stop()
+			task:close()
+			waiting_states[task_id] = true
+		end
+
+		local success, json = pcall(vim.json.decode, stream)
+		if success and json.delta and json.delta.text then
+			M.parse_message(buf, json.delta.text, nil)
 		end
 	end
 end
@@ -145,121 +124,60 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 	local curr_event_state = nil
 	local waiting_task = waiting(buf)
 
-	-- local function parse_and_call(result)
-	-- 	print("got to parse and call")
-	-- 	local event = result:match("^event: (.+)$")
-	-- 	if event then
-	-- 		print("event")
-	-- 		curr_event_state = event
-	-- 		return
-	-- 	end
-	-- 	local data_match = result:match("^data: (.+)$")
-	-- 	if data_match then
-	-- 		M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
-	-- 	end
-	-- end
-
 	if active_job then
 		active_job:shutdown()
 		active_job = nil
 	end
 
-	-- remove
-	local local_args = curl_args_fn(opts, tokens)
-	-- Debug prints before job creation
-	print("Debug: About to create job")
-	print("Debug: Command args:", vim.inspect(local_args))
-
-	-- Create a log file for debugging
-	local debug_file = io.open("debug.log", "a")
-	if debug_file then
-		debug_file:write("\n--- New Request ---\n")
-		debug_file:write(os.date() .. "\n")
-		debug_file:write("Args: " .. vim.inspect(local_args) .. "\n")
-		debug_file:close()
+	-- Debug file setup
+	local function write_debug(message)
+		local debug_file = io.open("debug.log", "a")
+		if debug_file then
+			debug_file:write(os.date() .. " - " .. message .. "\n")
+			debug_file:close()
+		end
 	end
 
 	active_job = Job:new({
 		command = "curl",
 		args = curl_args_fn(opts, tokens),
 		on_stdout = function(_, data)
-			-- Write to debug file immediately
-			local debug_file = io.open("debug.log", "a")
-			if debug_file then
-				debug_file:write("STDOUT: " .. vim.inspect(data) .. "\n")
-				debug_file:close()
-			end
-
 			if data then
-				for line in data:gmatch("[^\r\n]+") do
-					local event = line:match("^event: (.+)$")
-					if event then
-						curr_event_state = event
-						print("Debug: Found event:", event)
-					else
-						local data_match = line:match("^data: (.+)$")
-						if data_match then
-							print("Debug: Found data match:", data_match)
-							M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
-						end
+				local event = data:match("^event: (.+)$")
+				if event then
+					curr_event_state = event
+				else
+					local data_match = data:match("^data: (.+)$")
+					if data_match then
+						M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
 					end
 				end
 			end
-
-			-- log_to_file(data, "STDOUT")
-			-- print("data?.. " .. data)
-			-- if data then
-			-- 	parse_and_call(data)
-			-- end
 		end,
 		on_stderr = function(_, data)
-			-- Write to debug file immediately
-			local debug_file = io.open("debug.log", "a")
-			if debug_file then
-				debug_file:write("STDERR: " .. vim.inspect(data) .. "\n")
-				debug_file:close()
-			end
-
-			print("Debug: Received stderr:", vim.inspect(data))
-			log_to_file(data, "STDERROR")
+			write_debug("STDERR: " .. vim.inspect(data))
 		end,
 		on_exit = function(_, code)
-			-- Write to debug file immediately
-			local debug_file = io.open("debug.log", "a")
-			if debug_file then
-				debug_file:write("Exit code: " .. tostring(code) .. "\n")
-				debug_file:close()
-			end
-
-			print("Debug: Job exited with code:", code)
-			log_to_file(code, "EXIT CODE")
-			if waiting_task then
-				waiting_task:stop()
-				waiting_task:close()
-			end
+			write_debug("Exit code: " .. tostring(code))
 			active_job = nil
 		end,
-		stdout_buffered = false, -- Ensure stdout isn't buffered
-		stderr_buffered = false, -- Ensure stderr isn't buffered
+		stdout_buffered = false,
+		stderr_buffered = false,
 	})
-
-	print("Debug: Starting job")
-	active_job:start()
-	print("Debug: Job started")
 
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
-		pattern = "DING_LLM_Escape",
+		pattern = "Prompt_Escape",
 		callback = function()
 			if active_job then
 				active_job:shutdown()
-				print("LLM streaming cancelled")
+				print("model streaming cancelled")
 				active_job = nil
 			end
 		end,
 	})
 
-	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User DING_LLM_Escape<CR>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User Prompt_Escape<CR>", { noremap = true, silent = true })
 	return active_job
 end
 
