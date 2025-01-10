@@ -41,7 +41,7 @@ local function waiting(buf)
 	return timer
 end
 
-function M.parse_message(buf, result, waiting_task)
+function M.parse_message(buf, result)
 	vim.schedule(function()
 		if not vim.api.nvim_buf_is_valid(buf) then
 			return
@@ -50,12 +50,19 @@ function M.parse_message(buf, result, waiting_task)
 		local line_count = vim.api.nvim_buf_line_count(buf)
 		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
 
+		local result_lines = vim.fn.split(result, "\n")
+
 		if last_line:match("^[/-\\]$") then
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { "" })
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { result })
 		else
 			local current_response = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { current_response .. result })
+			local first_line = current_response .. result_lines[1]
+			local final_lines = { first_line }
+			for i = 2, #result_lines do
+				table.insert(final_lines, result_lines[i])
+			end
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
 	end)
 end
@@ -75,7 +82,7 @@ function M.get_anthropic_specific_args(opts, prompt)
 
 	local data = {
 		system = opts.system_prompt,
-		max_tokens = 256,
+		max_tokens = 1028,
 		messages = { { role = "user", content = prompt } },
 		model = opts.model,
 		stream = true,
@@ -110,7 +117,7 @@ function M.anthropic_spec_data(stream, state, buf, task)
 
 		local success, json = pcall(vim.json.decode, stream)
 		if success and json.delta and json.delta.text then
-			M.parse_message(buf, json.delta.text, nil)
+			M.parse_message(buf, json.delta.text)
 		end
 	end
 end
