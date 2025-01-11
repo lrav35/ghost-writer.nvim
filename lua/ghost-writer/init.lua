@@ -12,6 +12,14 @@ local function get_api_key(name)
 	end
 end
 
+local function write_debug(message)
+	local debug_file = io.open("debug.log", "a")
+	if debug_file then
+		debug_file:write(os.date() .. " - " .. message .. "\n")
+		debug_file:close()
+	end
+end
+
 local waiting_states = {}
 
 local function waiting(buf)
@@ -137,37 +145,17 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 
 	local local_args = curl_args_fn(opts, tokens)
 
-	-- Debug file setup
-	local function write_debug(message)
-		local debug_file = io.open("debug.log", "a")
-		if debug_file then
-			debug_file:write(os.date() .. " - " .. message .. "\n")
-			debug_file:close()
-		end
-	end
-
 	active_job = Job:new({
 		command = "curl",
 		args = local_args,
 		on_stdout = function(_, data)
 			if data then
-				write_debug("STDOUT: " .. vim.inspect(data))
-
-				local success, json_data = pcall(vim.json.decode, data)
-				if success then
-					write_debug("Parsed JSON: " .. vim.inspect(json_data))
-				end
-
 				local event = data:match("^event: (.+)$")
 				if event then
 					curr_event_state = event
-					write_debug("Found event: " .. event)
 				else
 					local data_match = data:match("^data: (.+)$")
 					if data_match then
-						write_debug(
-							"Found data match: " .. data_match .. " with current_event_state: " .. curr_event_state
-						)
 						M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
 					end
 				end
@@ -176,8 +164,7 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 		on_stderr = function(_, data)
 			write_debug("STDERR: " .. vim.inspect(data))
 		end,
-		on_exit = function(_, code)
-			write_debug("Exit code: " .. tostring(code))
+		on_exit = function(_)
 			active_job = nil
 		end,
 		stdout_buffered = false,
@@ -188,55 +175,71 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
-		pattern = "DING_LLM_Escape",
+		pattern = "model_escape_fn",
 		callback = function()
 			if active_job then
 				active_job:shutdown()
-				print("LLM streaming cancelled")
+				print("model streaming cancelled")
 				active_job = nil
 			end
 		end,
 	})
 
-	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User DING_LLM_Escape<CR>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<Esc>", ":doautocmd User model_escape_fn<CR>", { noremap = true, silent = true })
 	return active_job
 end
 
 function M.state_manager()
 	local context = nil
 
-	local function create_win_and_buf()
-		if not context then
-			local buffer = vim.api.nvim_create_buf(false, true)
-			local start_message = "hello, how can I assist you?"
+	local function setup_buffer(buffer)
+		local bo = vim.bo[buffer]
+		bo.buftype = "nofile"
+		bo.bufhidden = "wipe"
+		bo.swapfile = false
+		bo.filetype = "markdown"
+		return buffer
+	end
 
-			vim.cmd("70vsplit")
-			local window = vim.api.nvim_get_current_win()
-			vim.api.nvim_win_set_buf(window, buffer)
+	local function setup_window(window)
+		vim.wo[window].relativenumber = false
+		return window
+	end
 
-			vim.bo[buffer].buftype = "nofile"
-			vim.bo[buffer].bufhidden = "wipe"
-			vim.bo[buffer].swapfile = false
-			vim.bo[buffer].filetype = "markdown"
-
-			vim.wo[window].relativenumber = false
-
-			vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { start_message })
-
-			vim.api.nvim_create_autocmd("InsertEnter", {
-				group = vim.api.nvim_create_augroup("NotePanel", { clear = true }),
-				callback = function()
-					if vim.api.nvim_get_current_buf() == buffer then
-						local lines = vim.api.nvim_buf_get_lines(buffer, 0, -1, false)
-						if #lines == 1 and lines[1] == start_message then
-							vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { "" })
-						end
+	local function setup_autocmd(buffer, start_message)
+		vim.api.nvim_create_autocmd("InsertEnter", {
+			group = vim.api.nvim_create_augroup("NotePanel", { clear = true }),
+			callback = function()
+				if vim.api.nvim_get_current_buf() == buffer then
+					local lines = vim.api.nvim_buf_get_lines(buffer, 0, -1, false)
+					if #lines == 1 and lines[1] == start_message then
+						vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { "" })
 					end
-				end,
-			})
+				end
+			end,
+		})
+	end
 
-			context = { buf = buffer, win = window }
+	local function create_win_and_buf()
+		local start_message = "hello, how can I assist you?"
+
+		if context then
+			return context
 		end
+
+		local buffer = setup_buffer(vim.api.nvim_create_buf(false, true))
+
+		-- window width
+		vim.cmd(70 .. "vsplit")
+		local window = setup_window(vim.api.nvim_get_current_win())
+
+		vim.api.nvim_win_set_buf(window, buffer)
+
+		vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { start_message })
+
+		setup_autocmd(buffer, start_message)
+		context = { buf = buffer, win = window }
+		return context
 	end
 
 	local function destroy()
@@ -260,7 +263,7 @@ function M.state_manager()
 		open = function()
 			create_win_and_buf()
 		end,
-		close = function()
+		exit = function()
 			context = destroy()
 		end,
 		prompt = function()
@@ -273,7 +276,7 @@ function M.setup()
 	local manager = M.state_manager()
 
 	vim.keymap.set("n", "<leader>wo", manager.open, { desc = "[W]indow [O]pen Chat", noremap = true, silent = true })
-	vim.keymap.set("n", "<leader>wc", manager.close, { desc = "[W]indow [C]lose", noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>we", manager.exit, { desc = "[W]indow [E]xit", noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>p", manager.prompt, { desc = "[P]rompt", noremap = true, silent = true })
 end
 
