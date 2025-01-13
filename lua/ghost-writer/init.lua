@@ -55,10 +55,15 @@ function M.parse_message(buf, result)
 			return
 		end
 
+		local success, parsed = pcall(vim.json.decode, result)
+		if not success then
+			parsed = { text = result }
+		end
+
+		local text = parsed.delta and parsed.delta.text or parsed.text
+		local result_lines = vim.split(text, "\n", { plain = true })
 		local line_count = vim.api.nvim_buf_line_count(buf)
 		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
-
-		local result_lines = vim.fn.split(result, "\n")
 
 		if last_line:match("^[/-\\]$") then
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { "" })
@@ -114,6 +119,40 @@ function M.get_anthropic_specific_args(opts, prompt)
 	return args
 end
 
+-- Queue?...
+-- local message_queue = {}
+-- local batch_timer = nil
+-- local BATCH_DELAY = 10 -- milliseconds
+--
+-- function M.process_queue(buf)
+--     if #message_queue == 0 then return end
+--
+--     -- Combine multiple messages in the queue
+--     local combined_message = table.concat(message_queue)
+--     message_queue = {} -- Clear queue
+--
+--     vim.schedule(function()
+--         M.parse_message(buf, combined_message)
+--     end)
+-- end
+--
+-- function M.anthropic_spec_data(stream, state, buf, task)
+--     if state == "content_block_delta" then
+--         local success, json = pcall(vim.json.decode, stream)
+--         if success and json.delta and json.delta.text then
+--             table.insert(message_queue, json.delta.text)
+--
+--             -- Reset or start batch timer
+--             if batch_timer then
+--                 batch_timer:stop()
+--             end
+--             batch_timer = vim.defer_fn(function()
+--                 M.process_queue(buf)
+--             end, BATCH_DELAY)
+--         end
+--     end
+-- end
+
 function M.anthropic_spec_data(stream, state, buf, task)
 	if state == "content_block_delta" then
 		local task_id = tostring(task)
@@ -150,6 +189,7 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 		args = local_args,
 		on_stdout = function(_, data)
 			if data then
+				write_debug("STDOUT: " .. vim.inspect(data))
 				local event = data:match("^event: (.+)$")
 				if event then
 					curr_event_state = event
@@ -271,6 +311,18 @@ function M.state_manager()
 		end,
 	}
 end
+
+-- [[
+-- TODO:
+-- fix new line bug - misses some of them (DONE i think)
+-- Queue solution to avoid race conditions
+-- scroll page as streaming response comes in
+-- keybindings to adjust split size
+-- clean up funcions specific to anthropic and make more generic
+-- add capability for other apis
+-- move most config based code to setup in nvim config
+--
+-- ]]
 
 function M.setup()
 	local manager = M.state_manager()
