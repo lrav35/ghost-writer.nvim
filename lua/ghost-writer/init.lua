@@ -77,6 +77,12 @@ function M.parse_message(buf, result)
 			end
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
+
+		local win_id = vim.fn.bufwinid(buf)
+		if win_id ~= -1 then
+			local new_line_count = vim.api.nvim_buf_line_count(buf)
+			vim.api.nvim_win_set_cursor(win_id, { new_line_count, 0 })
+		end
 	end)
 end
 
@@ -260,6 +266,25 @@ function M.state_manager()
 		})
 	end
 
+	local function resize_window(direction)
+		local amount = 5
+		local commands = {
+			right = "vertical resize -" .. amount,
+			left = "vertical resize +" .. amount,
+		}
+		vim.cmd(commands[direction])
+	end
+
+	local function setup_keybindings(buffer)
+		local opts = { noremap = true, silent = true, buffer = buffer }
+		vim.keymap.set("n", "<A-h>", function()
+			resize_window("left")
+		end, opts)
+		vim.keymap.set("n", "<A-l>", function()
+			resize_window("right")
+		end, opts)
+	end
+
 	local function create_win_and_buf()
 		local start_message = "hello, how can I assist you?"
 
@@ -278,6 +303,7 @@ function M.state_manager()
 		vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { start_message })
 
 		setup_autocmd(buffer, start_message)
+		setup_keybindings(buffer)
 		context = { buf = buffer, win = window }
 		return context
 	end
@@ -316,8 +342,8 @@ end
 -- TODO:
 -- fix new line bug - misses some of them (DONE i think)
 -- Queue solution to avoid race conditions
--- scroll page as streaming response comes in
--- keybindings to adjust split size
+-- scroll page as streaming response comes in DONE
+-- keybindings to adjust split size DONE
 -- clean up funcions specific to anthropic and make more generic
 -- add capability for other apis
 -- move most config based code to setup in nvim config
