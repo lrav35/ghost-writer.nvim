@@ -57,7 +57,7 @@ local function waiting(buf)
 	return timer
 end
 
-function M.parse_message(buf, result)
+function M.parse_and_output_message(buf, result)
 	vim.schedule(function()
 		if not vim.api.nvim_buf_is_valid(buf) then
 			return
@@ -92,6 +92,7 @@ end
 local anthropic_opts = {
 	url = "https://api.anthropic.com/v1/messages",
 	model = "claude-3-5-sonnet-20241022",
+	target_state = "content_block_delta",
 
 	api_key_name = "ANTHROPIC_API_KEY",
 	system_prompt = helpful_prompt,
@@ -128,55 +129,64 @@ function M.get_anthropic_specific_args(opts, prompt)
 	return args
 end
 
--- Queue?...
--- local message_queue = {}
--- local batch_timer = nil
--- local BATCH_DELAY = 10 -- milliseconds
---
--- function M.process_queue(buf)
---     if #message_queue == 0 then return end
---
---     -- Combine multiple messages in the queue
---     local combined_message = table.concat(message_queue)
---     message_queue = {} -- Clear queue
---
---     vim.schedule(function()
---         M.parse_message(buf, combined_message)
---     end)
--- end
---
--- function M.anthropic_spec_data(stream, state, buf, task)
---     if state == "content_block_delta" then
---         local success, json = pcall(vim.json.decode, stream)
---         if success and json.delta and json.delta.text then
---             table.insert(message_queue, json.delta.text)
---
---             -- Reset or start batch timer
---             if batch_timer then
---                 batch_timer:stop()
---             end
---             batch_timer = vim.defer_fn(function()
---                 M.process_queue(buf)
---             end, BATCH_DELAY)
---         end
---     end
--- end
+local function manage_task(task)
+	if not task then
+		return
+	end
+	local task_id = tostring(task)
+	if not waiting_states[task_id] then
+		task:stop()
+		task:close()
+		waiting_states[task_id] = true
+	end
+end
 
-function M.anthropic_spec_data(stream, state, buf, task)
-	if state == "content_block_delta" then
-		local task_id = tostring(task)
-		if task and not waiting_states[task_id] then
-			task:stop()
-			task:close()
-			waiting_states[task_id] = true
+function M.handle_stream_data(opts)
+	return function(stream, state, buf, task)
+		-- Check if this is a state we want to handle
+		if state ~= opts.target_state then
+			return
 		end
+
+		manage_task(task)
 
 		local success, json = pcall(vim.json.decode, stream)
 		if success and json.delta and json.delta.text then
-			M.parse_message(buf, json.delta.text)
+			M.parse_and_output_message(buf, json.delta.text)
 		end
 	end
 end
+
+M.providers = {
+	anthropic = {
+		target_state = "content_block_delta",
+	},
+	-- Example for another provider
+	-- openai = {
+	--     target_state = "data", -- OpenAI-specific state
+	--     parse_stream = function(stream)
+	--         return pcall(vim.json.decode, stream)
+	--     end,
+	--     extract_content = function(parsed_data)
+	--         return parsed_data.choices and parsed_data.choices[1].delta.content
+	--     end
+	-- }
+}
+-- function M.anthropic_spec_data(stream, state, buf, task)
+-- 	if state == "content_block_delta" then
+-- 		local task_id = tostring(task)
+-- 		if task and not waiting_states[task_id] then
+-- 			task:stop()
+-- 			task:close()
+-- 			waiting_states[task_id] = true
+-- 		end
+--
+-- 		local success, json = pcall(vim.json.decode, stream)
+-- 		if success and json.delta and json.delta.text then
+-- 			M.parse_message(buf, json.delta.text)
+-- 		end
+-- 	end
+-- end
 
 local group = vim.api.nvim_create_augroup("sup", { clear = true })
 local active_job = nil
@@ -193,22 +203,35 @@ function M.make_request(tokens, opts, curl_args_fn, buf)
 
 	local local_args = curl_args_fn(opts, tokens)
 
+	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn)
+		if not data then
+			return
+		end
+
+		write_debug("STDOUT: " .. vim.inspect(data))
+		local event = data:match("^event: (.+)$")
+		if event then
+			return event
+		end
+
+		local data_match = data:match("^data: (.+)$")
+		if data_match then
+			handle_data_fn(data_match, curr_state, buffer, task)
+		end
+		return curr_state
+	end
+
 	active_job = Job:new({
 		command = "curl",
 		args = local_args,
 		on_stdout = function(_, data)
-			if data then
-				write_debug("STDOUT: " .. vim.inspect(data))
-				local event = data:match("^event: (.+)$")
-				if event then
-					curr_event_state = event
-				else
-					local data_match = data:match("^data: (.+)$")
-					if data_match then
-						M.anthropic_spec_data(data_match, curr_event_state, buf, waiting_task)
-					end
-				end
-			end
+			curr_event_state = handle_stdout(
+				data,
+				curr_event_state,
+				buf,
+				waiting_task,
+				M.handle_stream_data(opts) -- or whatever handler you want to use
+			)
 		end,
 		on_stderr = function(_, data)
 			write_debug("STDERR: " .. vim.inspect(data))
@@ -348,8 +371,8 @@ end
 -- scroll page as streaming response comes in DONE
 -- keybindings to adjust split size DONE
 -- create toggle ability that saves all prior context
--- fix spinngin loader - it doesnt work right unless you are at the last line
--- clean up funcions specific to anthropic and make more generic
+-- fix spinngin loader - it doesnt work right unless you are at the last line DONE
+-- clean up funcions specific to anthropic and make more generic WIP
 -- add capability for other apis
 -- move most config based code to setup in nvim config
 --
