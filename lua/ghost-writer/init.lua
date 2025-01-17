@@ -20,6 +20,14 @@ local function write_debug(message)
 	end
 end
 
+local function cursor_to_bottom(buf)
+	local win_id = vim.fn.bufwinid(buf)
+	if win_id ~= -1 then
+		local line_count = vim.api.nvim_buf_line_count(buf)
+		vim.api.nvim_win_set_cursor(win_id, { line_count, 0 })
+	end
+end
+
 local waiting_states = {}
 
 local function waiting(buf)
@@ -28,20 +36,20 @@ local function waiting(buf)
 	local timer = vim.loop.new_timer()
 	local index = 1
 
+	local line_count = vim.api.nvim_buf_line_count(buf)
+
+	-- add two lines to the end of the buffer
+	vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", "" })
+	local spinner_loc = line_count + 2
+
 	timer:start(
 		0,
 		200,
 		vim.schedule_wrap(function()
 			if vim.api.nvim_buf_is_valid(buf) then
-				local cursor_pos = vim.api.nvim_win_get_cursor(0)
-				local line_idx = cursor_pos[1] + 2
-
-				local line_count = vim.api.nvim_buf_line_count(buf)
-				if line_idx > line_count then
-					vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", "" })
-				end
-
-				vim.api.nvim_buf_set_lines(buf, line_idx - 1, line_idx, false, { char_seq[index] })
+				-- loading spinner to bottom
+				vim.api.nvim_buf_set_lines(buf, spinner_loc - 1, spinner_loc, false, { char_seq[index] })
+				cursor_to_bottom(buf)
 				index = index % #char_seq + 1
 			end
 		end)
@@ -77,12 +85,7 @@ function M.parse_message(buf, result)
 			end
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
-
-		local win_id = vim.fn.bufwinid(buf)
-		if win_id ~= -1 then
-			local new_line_count = vim.api.nvim_buf_line_count(buf)
-			vim.api.nvim_win_set_cursor(win_id, { new_line_count, 0 })
-		end
+		cursor_to_bottom(buf)
 	end)
 end
 
@@ -101,7 +104,7 @@ function M.get_anthropic_specific_args(opts, prompt)
 
 	local data = {
 		system = opts.system_prompt,
-		max_tokens = 1028,
+		max_tokens = 2048,
 		messages = { { role = "user", content = prompt } },
 		model = opts.model,
 		stream = true,
@@ -341,9 +344,11 @@ end
 -- [[
 -- TODO:
 -- fix new line bug - misses some of them (DONE i think)
--- Queue solution to avoid race conditions
+-- Queue solution to avoid race conditions? it only misses an "I" in "I'll" idk
 -- scroll page as streaming response comes in DONE
 -- keybindings to adjust split size DONE
+-- create toggle ability that saves all prior context
+-- fix spinngin loader - it doesnt work right unless you are at the last line
 -- clean up funcions specific to anthropic and make more generic
 -- add capability for other apis
 -- move most config based code to setup in nvim config
