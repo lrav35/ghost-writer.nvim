@@ -1,9 +1,6 @@
 local M = {}
-local defaults = {}
+local waiting_states = {}
 local Job = require("plenary.job")
-
-local helpful_prompt =
-	"you are a helpful assistant, what I am sending you may be notes, code or context provided by our previous conversation"
 
 local function get_api_key(name)
 	if os.getenv(name) then
@@ -30,8 +27,6 @@ local function cursor_to_bottom(buf)
 		vim.api.nvim_win_set_cursor(win_id, { line_count, 0 })
 	end
 end
-
-local waiting_states = {}
 
 local function waiting(buf)
 	local char_seq = { "\\", "-", "/" }
@@ -92,22 +87,13 @@ local function parse_and_output_message(buf, result)
 	end)
 end
 
-local anthropic_opts = {
-	url = "https://api.anthropic.com/v1/messages",
-	model = "claude-3-5-sonnet-20241022",
-	target_state = "content_block_delta",
-	api_key_name = "ANTHROPIC_API_KEY",
-	system_prompt = helpful_prompt,
-	replace = false,
-}
-
 function M.get_anthropic_specific_args(opts, prompt)
 	local url = opts.url
-	local api_key = opts.api_key_name and get_api_key("ANTHROPIC_API_KEY")
+	local api_key = opts.api_key_name and get_api_key(opts.api_key_name)
 
 	local data = {
 		system = opts.system_prompt,
-		max_tokens = 2048,
+		max_tokens = opts.max_tokens,
 		messages = { { role = "user", content = prompt } },
 		model = opts.model,
 		stream = true,
@@ -159,44 +145,13 @@ function M.handle_stream_data(opts)
 	end
 end
 
-M.providers = {
-	anthropic = {
-		target_state = "content_block_delta",
-	},
-
-	-- Example for another provider
-	-- openai = {
-	--     target_state = "data", -- OpenAI-specific state
-	--     parse_stream = function(stream)
-	--         return pcall(vim.json.decode, stream)
-	--     end,
-	--     extract_content = function(parsed_data)
-	--         return parsed_data.choices and parsed_data.choices[1].delta.content
-	--     end
-	-- }
-}
--- function M.anthropic_spec_data(stream, state, buf, task)
--- 	if state == "content_block_delta" then
--- 		local task_id = tostring(task)
--- 		if task and not waiting_states[task_id] then
--- 			task:stop()
--- 			task:close()
--- 			waiting_states[task_id] = true
--- 		end
---
--- 		local success, json = pcall(vim.json.decode, stream)
--- 		if success and json.delta and json.delta.text then
--- 			M.parse_message(buf, json.delta.text)
--- 		end
--- 	end
--- end
-
 local group = vim.api.nvim_create_augroup("LLM", { clear = true })
 local active_job = nil
 
 function M.make_request(tokens, curl_args_fn, buf)
 	local provider = M.config.default
 	local provider_opts = M.config.providers[provider]
+	provider_opts.system_prompt = M.config.system_prompt
 
 	vim.api.nvim_clear_autocmds({ group = group })
 	local curr_event_state = nil
@@ -213,8 +168,8 @@ function M.make_request(tokens, curl_args_fn, buf)
 		if not data then
 			return
 		end
-
 		write_debug("STDOUT: " .. vim.inspect(data))
+
 		local event = data:match("^event: (.+)$")
 		if event then
 			return event
@@ -231,6 +186,7 @@ function M.make_request(tokens, curl_args_fn, buf)
 		command = "curl",
 		args = local_args,
 		on_stdout = function(_, data)
+			-- this might need to change with a new model
 			curr_event_state =
 				handle_stdout(data, curr_event_state, buf, waiting_task, M.handle_stream_data(provider_opts))
 		end,
@@ -383,13 +339,13 @@ end
 -- ]]
 
 function M.setup(opts)
-	M.config = vim.tbl_deep_extend("force", defaults, opts or {})
-	print(vim.inspect(M.config))
+	M.config = opts
 	local manager = M.state_manager()
+	local global_actions = { open = true, exit = true, prompt = true }
 
 	-- Set up global keymaps
 	for action, keymap in pairs(M.config.keymaps) do
-		if action ~= "buffer" then
+		if global_actions[action] then
 			vim.keymap.set("n", keymap.key, manager[action], {
 				desc = keymap.desc,
 				noremap = true,
