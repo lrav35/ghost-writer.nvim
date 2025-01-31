@@ -2,14 +2,6 @@ local M = {}
 local waiting_states = {}
 local Job = require("plenary.job")
 
-local function get_api_key(name)
-	if os.getenv(name) then
-		return os.getenv(name)
-	else
-		return "not there, mate"
-	end
-end
-
 local function write_debug(message)
 	if M.config.debug then
 		local debug_file = io.open("debug.log", "a")
@@ -87,36 +79,6 @@ local function parse_and_output_message(buf, result)
 	end)
 end
 
-function M.get_anthropic_specific_args(opts, prompt)
-	local url = opts.url
-	local api_key = opts.api_key_name and get_api_key(opts.api_key_name)
-
-	local data = {
-		system = opts.system_prompt,
-		max_tokens = opts.max_tokens,
-		messages = { { role = "user", content = prompt } },
-		model = opts.model,
-		stream = true,
-	}
-
-	local json_data = vim.json.encode(data)
-
-	local args = {
-		"--no-buffer",
-		"-N",
-		url,
-		"-H",
-		"Content-Type: application/json",
-		"-H",
-		"anthropic-version: 2023-06-01",
-		"-H",
-		string.format("x-api-key: %s", api_key),
-		"-d",
-		json_data,
-	}
-	return args
-end
-
 local function manage_task(task)
 	if not task then
 		return
@@ -131,16 +93,15 @@ end
 
 function M.handle_stream_data(opts)
 	return function(stream, state, buf, task)
-		-- Check if this is a state we want to handle
-		if state ~= opts.target_state then
+		if opts.event_based and state ~= opts.target_state then
 			return
 		end
 
 		manage_task(task)
 
-		local success, json = pcall(vim.json.decode, stream)
-		if success and json.delta and json.delta.text then
-			parse_and_output_message(buf, json.delta.text)
+		local content = opts.parser(stream)
+		if content then
+			parse_and_output_message(buf, content)
 		end
 	end
 end
@@ -148,9 +109,19 @@ end
 local group = vim.api.nvim_create_augroup("LLM", { clear = true })
 local active_job = nil
 
-function M.make_request(tokens, curl_args_fn, buf)
+local function parse_stream(data, event_based)
+	if event_based and data:match("^event: ") then
+		return "event", data:match("^event: (.+)$")
+	end
+	if data:match("^data: ") then
+		return "data", data:match("^data: (.+)$")
+	end
+end
+
+function M.make_request(tokens, buf)
 	local provider = M.config.default
 	local provider_opts = M.config.providers[provider]
+	local curl_args_fn = provider_opts.curl_args_fn
 	provider_opts.system_prompt = M.config.system_prompt
 
 	vim.api.nvim_clear_autocmds({ group = group })
@@ -164,36 +135,39 @@ function M.make_request(tokens, curl_args_fn, buf)
 
 	local local_args = curl_args_fn(provider_opts, tokens)
 
-	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn)
+	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
 		if not data then
-			return
-		end
-		write_debug("STDOUT: " .. vim.inspect(data))
-
-		local event = data:match("^event: (.+)$")
-		if event then
-			return event
+			return curr_state
 		end
 
-		local data_match = data:match("^data: (.+)$")
-		if data_match then
-			handle_data_fn(data_match, curr_state, buffer, task)
+		local type, content = parse_stream(data, opts.event_based)
+
+		if type == "data" then
+			handle_data_fn(content, curr_state, buffer, task)
 		end
-		return curr_state
+
+		return type == "event" and content or curr_state
 	end
 
 	active_job = Job:new({
 		command = "curl",
 		args = local_args,
 		on_stdout = function(_, data)
-			-- this might need to change with a new model
-			curr_event_state =
-				handle_stdout(data, curr_event_state, buf, waiting_task, M.handle_stream_data(provider_opts))
+			write_debug("STDOUT: " .. vim.inspect(data))
+			curr_event_state = handle_stdout(
+				data,
+				curr_event_state,
+				buf,
+				waiting_task,
+				M.handle_stream_data(provider_opts),
+				provider_opts
+			)
 		end,
 		on_stderr = function(_, data)
 			write_debug("STDERR: " .. vim.inspect(data))
 		end,
-		on_exit = function(_)
+		on_exit = function(_, data)
+			write_debug("STDEXIT: " .. vim.inspect(data))
 			active_job = nil
 		end,
 		stdout_buffered = false,
@@ -308,7 +282,7 @@ function M.state_manager()
 		if context and vim.api.nvim_buf_is_valid(context.buf) then
 			local lines = vim.api.nvim_buf_get_lines(context.buf, 0, -1, false)
 			local message = table.concat(lines, "\n")
-			M.make_request(message, M.get_anthropic_specific_args, context.buf)
+			M.make_request(message, context.buf)
 		end
 	end
 
