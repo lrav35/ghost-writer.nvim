@@ -1,6 +1,7 @@
 local M = {}
 local waiting_states = {}
 local Job = require("plenary.job")
+local conversation_history = {}
 
 local function write_debug(message)
 	if M.config.debug then
@@ -75,6 +76,15 @@ local function parse_and_output_message(buf, result)
 			end
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
+
+		-- Store assistant's response in conversation history
+		if text and text ~= "" then
+			table.insert(conversation_history, {
+				role = "assistant",
+				content = text,
+			})
+		end
+
 		cursor_to_bottom(buf)
 	end)
 end
@@ -118,7 +128,7 @@ local function parse_stream(data, event_based)
 	end
 end
 
-function M.make_request(tokens, buf)
+function M.make_request(messages, buf)
 	local provider = M.config.default
 	local provider_opts = M.config.providers[provider]
 	local curl_args_fn = provider_opts.curl_args_fn
@@ -133,7 +143,27 @@ function M.make_request(tokens, buf)
 		active_job = nil
 	end
 
-	local local_args = curl_args_fn(provider_opts, tokens)
+	-- Ensure messages is in the right format (array of message objects)
+	local formatted_messages = messages
+	if type(messages) == "string" then
+		-- Legacy support for string input
+		formatted_messages = {
+			{ role = "user", content = messages },
+		}
+	end
+
+	-- Add the system prompt if defined
+	if provider_opts.system_prompt and provider_opts.system_prompt ~= "" then
+		table.insert(formatted_messages, 1, {
+			role = "system",
+			content = provider_opts.system_prompt,
+		})
+	end
+
+	local spinner_location = vim.api.nvim_buf_line_count(buf) + 1
+	vim.api.nvim_buf_set_lines(buf, spinner_location - 1, spinner_location - 1, false, { "Assistant:", "" })
+
+	local local_args = curl_args_fn(provider_opts, formatted_messages)
 
 	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
 		if not data then
@@ -282,7 +312,17 @@ function M.state_manager()
 		if context and vim.api.nvim_buf_is_valid(context.buf) then
 			local lines = vim.api.nvim_buf_get_lines(context.buf, 0, -1, false)
 			local message = table.concat(lines, "\n")
-			M.make_request(message, context.buf)
+
+			-- Add user message to conversation history
+			table.insert(conversation_history, {
+				role = "user",
+				content = message,
+			})
+
+			-- Clear buffer after capturing the message
+			vim.api.nvim_buf_set_lines(context.buf, 0, -1, false, { "" })
+
+			M.make_request(conversation_history, context.buf)
 		end
 	end
 
@@ -315,7 +355,7 @@ end
 function M.setup(opts)
 	M.config = opts
 	local manager = M.state_manager()
-	local global_actions = { open = true, exit = true, prompt = true }
+	local global_actions = { open = true, exit = true, prompt = true, reset = true }
 
 	-- Set up global keymaps
 	for action, keymap in pairs(M.config.keymaps) do
