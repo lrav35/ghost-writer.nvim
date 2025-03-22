@@ -2,6 +2,7 @@ local M = {}
 local waiting_states = {}
 local Job = require("plenary.job")
 local conversation_history = {}
+local response = ""
 
 local function write_debug(message)
 	if M.config.debug then
@@ -41,7 +42,7 @@ local function waiting(buf)
 	local index = 1
 
 	local line_count = vim.api.nvim_buf_line_count(buf)
-	vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "Assistant: " .. char_seq[index] })
+	-- vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "Assistant: " .. char_seq[index] })
 	local spinner_line = line_count
 
 	timer:start(
@@ -50,13 +51,13 @@ local function waiting(buf)
 		vim.schedule_wrap(function()
 			if vim.api.nvim_buf_is_valid(buf) then
 				-- Update the spinner on its dedicated line
-				vim.api.nvim_buf_set_lines(
-					buf,
-					spinner_line,
-					spinner_line + 1,
-					false,
-					{ "Assistant: " .. char_seq[index] }
-				)
+				-- vim.api.nvim_buf_set_lines(
+				-- 	buf,
+				-- 	spinner_line,
+				-- 	spinner_line + 1,
+				-- 	false,
+				-- 	{ "Assistant: " .. char_seq[index] }
+				-- )
 				cursor_to_bottom(buf)
 				index = index % #char_seq + 1
 			end
@@ -81,29 +82,32 @@ local function parse_and_output_message(buf, result)
 		local line_count = vim.api.nvim_buf_line_count(buf)
 		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
 
+		-- Wrap the response with <assistant> tags
+		local wrapped_lines = {}
 		if last_line:match("^Assistant: [/-\\]$") then
-			local first_line = "Assistant: " .. result_lines[1]
-			local final_lines = { first_line }
+			-- First chunk of the streaming response
+			table.insert(wrapped_lines, "<assistant> " .. result_lines[1])
 			for i = 2, #result_lines do
-				table.insert(final_lines, result_lines[i])
+				table.insert(wrapped_lines, result_lines[i])
 			end
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
+			-- Add closing tag if this is the final chunk (you may need to detect this differently)
+			table.insert(wrapped_lines, "</assistant>")
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, wrapped_lines)
 		else
-			local current_response = last_line:gsub("^Assistant: ", "") -- Strip "Assistant: " if present
-			local first_line = "Assistant: " .. current_response .. result_lines[1]
-			local final_lines = { first_line }
+			-- Subsequent chunks: append to existing response within tags
+			local current_response = last_line:gsub("^<assistant> ", "") -- Strip opening tag from last line
+			local final_lines = {}
+			table.insert(final_lines, "<assistant> " .. current_response .. result_lines[1])
 			for i = 2, #result_lines do
 				table.insert(final_lines, result_lines[i])
 			end
+			-- Preserve the closing tag
+			table.insert(final_lines, "</assistant>")
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
 
 		if text and text ~= "" then
-			table.insert(conversation_history, {
-				role = "assistant",
-				content = text,
-			})
-			write_conversation_history()
+			response = response .. text
 		end
 
 		cursor_to_bottom(buf)
@@ -176,6 +180,8 @@ function M.make_request(messages, buf)
 
 	local local_args = curl_args_fn(provider_opts, formatted_messages)
 
+	print(vim.inspect(local_args))
+
 	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
 		if not data then
 			return curr_state
@@ -209,6 +215,26 @@ function M.make_request(messages, buf)
 		end,
 		on_exit = function(_, data)
 			write_debug("STDEXIT: " .. vim.inspect(data))
+			vim.schedule(function()
+				if vim.api.nvim_buf_is_valid(buf) then
+					local line_count = vim.api.nvim_buf_line_count(buf)
+					local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
+					if not last_line:match("</assistant>$") then
+						vim.api.nvim_buf_set_lines(
+							buf,
+							line_count - 1,
+							line_count,
+							false,
+							{ last_line .. "</assistant>" }
+						)
+					end
+				end
+			end)
+			table.insert(conversation_history, {
+				role = "assistant",
+				content = response,
+			})
+			response = ""
 			active_job = nil
 		end,
 		stdout_buffered = false,
@@ -216,6 +242,8 @@ function M.make_request(messages, buf)
 	})
 
 	active_job:start()
+
+	write_conversation_history()
 
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
@@ -351,9 +379,8 @@ end
 
 -- [[
 -- TODO:
--- clean up funcions specific to anthropic and make more generic WIP
--- add capability for other apis
--- move most config based code to setup in nvim config
+-- add some more spacing to printout
+-- each streaming response is getting put in its own object for message history - it should all be one response for the assistant
 -- fix this bug:
 -- Error executing vim.schedule lua callback: ...ode/personal/ghost-writer.nvim/lua/ghost-writer/init.lua:78: 'replacement string' item contains newlines
 -- stack traceback:
