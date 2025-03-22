@@ -21,25 +21,42 @@ local function cursor_to_bottom(buf)
 	end
 end
 
+local function write_conversation_history()
+	local filepath = vim.fn.getcwd() .. "/conversation_history.json" -- Explicit full path
+	local history_file = io.open(filepath, "w") -- Back to "w" for overwrite
+	if history_file then
+		local json_history = vim.json.encode(conversation_history)
+		history_file:write(json_history)
+		history_file:close()
+		write_debug("Successfully wrote conversation history to " .. filepath)
+	else
+		write_debug("Failed to open " .. filepath .. " for writing - check permissions")
+	end
+end
+
 local function waiting(buf)
-	local char_seq = { "\\", "-", "/" }
+	local char_seq = { "-", "\\", "/" }
 
 	local timer = vim.loop.new_timer()
 	local index = 1
 
 	local line_count = vim.api.nvim_buf_line_count(buf)
-
-	-- add two lines to the end of the buffer
-	vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "", "" })
-	local spinner_loc = line_count + 2
+	vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "Assistant: " .. char_seq[index] })
+	local spinner_line = line_count
 
 	timer:start(
 		0,
 		200,
 		vim.schedule_wrap(function()
 			if vim.api.nvim_buf_is_valid(buf) then
-				-- loading spinner to bottom
-				vim.api.nvim_buf_set_lines(buf, spinner_loc - 1, spinner_loc, false, { char_seq[index] })
+				-- Update the spinner on its dedicated line
+				vim.api.nvim_buf_set_lines(
+					buf,
+					spinner_line,
+					spinner_line + 1,
+					false,
+					{ "Assistant: " .. char_seq[index] }
+				)
 				cursor_to_bottom(buf)
 				index = index % #char_seq + 1
 			end
@@ -64,12 +81,16 @@ local function parse_and_output_message(buf, result)
 		local line_count = vim.api.nvim_buf_line_count(buf)
 		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
 
-		if last_line:match("^[/-\\]$") then
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { "" })
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { result })
+		if last_line:match("^Assistant: [/-\\]$") then
+			local first_line = "Assistant: " .. result_lines[1]
+			local final_lines = { first_line }
+			for i = 2, #result_lines do
+				table.insert(final_lines, result_lines[i])
+			end
+			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		else
-			local current_response = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
-			local first_line = current_response .. result_lines[1]
+			local current_response = last_line:gsub("^Assistant: ", "") -- Strip "Assistant: " if present
+			local first_line = "Assistant: " .. current_response .. result_lines[1]
 			local final_lines = { first_line }
 			for i = 2, #result_lines do
 				table.insert(final_lines, result_lines[i])
@@ -77,12 +98,12 @@ local function parse_and_output_message(buf, result)
 			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
 
-		-- Store assistant's response in conversation history
 		if text and text ~= "" then
 			table.insert(conversation_history, {
 				role = "assistant",
 				content = text,
 			})
+			write_conversation_history()
 		end
 
 		cursor_to_bottom(buf)
@@ -143,25 +164,15 @@ function M.make_request(messages, buf)
 		active_job = nil
 	end
 
-	-- Ensure messages is in the right format (array of message objects)
 	local formatted_messages = messages
-	if type(messages) == "string" then
-		-- Legacy support for string input
-		formatted_messages = {
-			{ role = "user", content = messages },
-		}
-	end
 
-	-- Add the system prompt if defined
-	if provider_opts.system_prompt and provider_opts.system_prompt ~= "" then
-		table.insert(formatted_messages, 1, {
-			role = "system",
-			content = provider_opts.system_prompt,
-		})
-	end
-
-	local spinner_location = vim.api.nvim_buf_line_count(buf) + 1
-	vim.api.nvim_buf_set_lines(buf, spinner_location - 1, spinner_location - 1, false, { "Assistant:", "" })
+	-- -- Add the system prompt if defined
+	-- if provider_opts.system_prompt and provider_opts.system_prompt ~= "" then
+	-- 	table.insert(formatted_messages, 1, {
+	-- 		role = "system",
+	-- 		content = provider_opts.system_prompt,
+	-- 	})
+	-- end
 
 	local local_args = curl_args_fn(provider_opts, formatted_messages)
 
@@ -303,6 +314,7 @@ function M.state_manager()
 		if context then
 			if vim.api.nvim_buf_is_valid(context.buf) and vim.api.nvim_win_is_valid(context.win) then
 				vim.api.nvim_buf_delete(context.buf, { force = true })
+				conversation_history = {}
 				return nil
 			end
 		end
@@ -318,9 +330,7 @@ function M.state_manager()
 				role = "user",
 				content = message,
 			})
-
-			-- Clear buffer after capturing the message
-			vim.api.nvim_buf_set_lines(context.buf, 0, -1, false, { "" })
+			write_conversation_history()
 
 			M.make_request(conversation_history, context.buf)
 		end
