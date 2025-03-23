@@ -3,6 +3,8 @@ local waiting_states = {}
 local Job = require("plenary.job")
 local conversation_history = {}
 local response = ""
+local ASSISTANT_START = "<assistant--->"
+local ASSISTANT_END = "<---assistant>"
 
 local function write_debug(message)
 	if M.config.debug then
@@ -23,8 +25,8 @@ local function cursor_to_bottom(buf)
 end
 
 local function write_conversation_history()
-	local filepath = vim.fn.getcwd() .. "/conversation_history.json" -- Explicit full path
-	local history_file = io.open(filepath, "w") -- Back to "w" for overwrite
+	local filepath = vim.fn.getcwd() .. "/conversation_history.json"
+	local history_file = io.open(filepath, "w")
 	if history_file then
 		local json_history = vim.json.encode(conversation_history)
 		history_file:write(json_history)
@@ -37,27 +39,17 @@ end
 
 local function waiting(buf)
 	local char_seq = { "-", "\\", "/" }
-
 	local timer = vim.loop.new_timer()
 	local index = 1
-
 	local line_count = vim.api.nvim_buf_line_count(buf)
-	-- vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { "Assistant: " .. char_seq[index] })
-	local spinner_line = line_count
-
+	vim.api.nvim_buf_set_lines(buf, line_count, line_count, false, { ASSISTANT_START, char_seq[index] })
+	local spinner_line = line_count + 1
 	timer:start(
 		0,
 		200,
 		vim.schedule_wrap(function()
 			if vim.api.nvim_buf_is_valid(buf) then
-				-- Update the spinner on its dedicated line
-				-- vim.api.nvim_buf_set_lines(
-				-- 	buf,
-				-- 	spinner_line,
-				-- 	spinner_line + 1,
-				-- 	false,
-				-- 	{ "Assistant: " .. char_seq[index] }
-				-- )
+				vim.api.nvim_buf_set_lines(buf, spinner_line, spinner_line + 1, false, { char_seq[index] })
 				cursor_to_bottom(buf)
 				index = index % #char_seq + 1
 			end
@@ -66,50 +58,51 @@ local function waiting(buf)
 	return timer
 end
 
-local function parse_and_output_message(buf, result)
+local function parse_and_output_message(buf, result, spinner_timer)
 	vim.schedule(function()
 		if not vim.api.nvim_buf_is_valid(buf) then
 			return
 		end
 
+		-- Parse the JSON result, fallback to raw text if parsing fails
 		local success, parsed = pcall(vim.json.decode, result)
-		if not success then
-			parsed = { text = result }
+		local text = parsed.delta and parsed.delta.text or (success and parsed.text) or result
+		if not text or text == "" then
+			return
 		end
 
-		local text = parsed.delta and parsed.delta.text or parsed.text
-		local result_lines = vim.split(text, "\n", { plain = true })
+		-- Get current buffer state
 		local line_count = vim.api.nvim_buf_line_count(buf)
-		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
+		local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1] or ""
+		local second_to_last_line = vim.api.nvim_buf_get_lines(buf, line_count - 2, line_count - 1, false)[1] or ""
 
-		-- Wrap the response with <assistant> tags
-		local wrapped_lines = {}
-		if last_line:match("^Assistant: [/-\\]$") then
-			-- First chunk of the streaming response
-			table.insert(wrapped_lines, "<assistant> " .. result_lines[1])
-			for i = 2, #result_lines do
-				table.insert(wrapped_lines, result_lines[i])
+		-- Accumulate response
+		response = response .. text
+
+		-- Split the incoming text into lines, preserving all newlines
+		local new_lines = vim.split(text, "\n", { plain = true })
+
+		-- Prepare the output lines
+		local output_lines = {}
+		if last_line:match("^[-/\\]$") and second_to_last_line == ASSISTANT_START then
+			-- Replace spinner with the response, keeping ASSISTANT_START
+			if spinner_timer then
+				spinner_timer:stop()
+				spinner_timer:close()
 			end
-			-- Add closing tag if this is the final chunk (you may need to detect this differently)
-			table.insert(wrapped_lines, "</assistant>")
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, wrapped_lines)
+			for i, line in ipairs(new_lines) do
+				table.insert(output_lines, line)
+			end
 		else
-			-- Subsequent chunks: append to existing response within tags
-			local current_response = last_line:gsub("^<assistant> ", "") -- Strip opening tag from last line
-			local final_lines = {}
-			table.insert(final_lines, "<assistant> " .. current_response .. result_lines[1])
-			for i = 2, #result_lines do
-				table.insert(final_lines, result_lines[i])
+			for i, line in ipairs(new_lines) do
+				table.insert(output_lines, line)
 			end
-			-- Preserve the closing tag
-			table.insert(final_lines, "</assistant>")
-			vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, final_lines)
 		end
 
-		if text and text ~= "" then
-			response = response .. text
-		end
-
+		-- Update buffer: replace spinner line or append after last <assistant>
+		local start_line = (last_line:match("^[-/\\]$") and second_to_last_line == ASSISTANT_START) and (line_count - 1)
+			or line_count
+		vim.api.nvim_buf_set_lines(buf, start_line, line_count, false, output_lines)
 		cursor_to_bottom(buf)
 	end)
 end
@@ -170,17 +163,7 @@ function M.make_request(messages, buf)
 
 	local formatted_messages = messages
 
-	-- -- Add the system prompt if defined
-	-- if provider_opts.system_prompt and provider_opts.system_prompt ~= "" then
-	-- 	table.insert(formatted_messages, 1, {
-	-- 		role = "system",
-	-- 		content = provider_opts.system_prompt,
-	-- 	})
-	-- end
-
 	local local_args = curl_args_fn(provider_opts, formatted_messages)
-
-	print(vim.inspect(local_args))
 
 	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
 		if not data then
@@ -219,14 +202,8 @@ function M.make_request(messages, buf)
 				if vim.api.nvim_buf_is_valid(buf) then
 					local line_count = vim.api.nvim_buf_line_count(buf)
 					local last_line = vim.api.nvim_buf_get_lines(buf, line_count - 1, line_count, false)[1]
-					if not last_line:match("</assistant>$") then
-						vim.api.nvim_buf_set_lines(
-							buf,
-							line_count - 1,
-							line_count,
-							false,
-							{ last_line .. "</assistant>" }
-						)
+					if not last_line:match(ASSISTANT_END) then
+						vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, { last_line, ASSISTANT_END })
 					end
 				end
 			end)
@@ -234,6 +211,7 @@ function M.make_request(messages, buf)
 				role = "assistant",
 				content = response,
 			})
+			print(vim.inspect(conversation_history))
 			response = ""
 			active_job = nil
 		end,
@@ -348,19 +326,46 @@ function M.state_manager()
 		end
 	end
 
+	local function get_user_prompt_toks(buf)
+		local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
+		local message = ""
+
+		local marker_index
+		for i = #lines, 1, -1 do
+			if lines[i]:match("</assistant>") then
+				marker_index = i
+				break
+			end
+		end
+
+		local relevant_lines = {}
+		if marker_index then
+			for i = marker_index + 1, #lines, 1 do
+				if lines[i] and lines[i]:match("%S") then -- Only add non-empty lines
+					table.insert(relevant_lines, lines[i])
+				end
+			end
+		else
+			relevant_lines = lines
+		end
+
+		message = table.concat(relevant_lines, "\n")
+		return message
+	end
+
 	local function request()
 		if context and vim.api.nvim_buf_is_valid(context.buf) then
-			local lines = vim.api.nvim_buf_get_lines(context.buf, 0, -1, false)
-			local message = table.concat(lines, "\n")
+			local user_message = get_user_prompt_toks(context.buf)
 
-			-- Add user message to conversation history
-			table.insert(conversation_history, {
-				role = "user",
-				content = message,
-			})
-			write_conversation_history()
+			if user_message ~= "" then
+				table.insert(conversation_history, {
+					role = "user",
+					content = user_message,
+				})
+				write_conversation_history()
 
-			M.make_request(conversation_history, context.buf)
+				M.make_request(conversation_history, context.buf)
+			end
 		end
 	end
 
