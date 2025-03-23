@@ -79,29 +79,41 @@ local function parse_and_output_message(buf, result, spinner_timer)
 		-- Accumulate response
 		response = response .. text
 
-		-- Split the incoming text into lines, preserving all newlines
+		-- Split text by newlines to handle multi-line chunks
 		local new_lines = vim.split(text, "\n", { plain = true })
 
-		-- Prepare the output lines
+		-- Prepare output lines
 		local output_lines = {}
 		if last_line:match("^[-/\\]$") and second_to_last_line == ASSISTANT_START then
-			-- Replace spinner with the response, keeping ASSISTANT_START
+			-- Replace spinner, keeping ASSISTANT_START on its own line
 			if spinner_timer then
 				spinner_timer:stop()
 				spinner_timer:close()
 			end
+			table.insert(output_lines, ASSISTANT_START) -- Keep tag on its own line
 			for i, line in ipairs(new_lines) do
-				table.insert(output_lines, line)
+				table.insert(output_lines, line) -- Start text on next line
 			end
 		else
-			for i, line in ipairs(new_lines) do
-				table.insert(output_lines, line)
+			-- Append to the last non-tag line, preserving ASSISTANT_START on its own
+			local start_idx = line_count - 1
+			if second_to_last_line == ASSISTANT_START then
+				start_idx = line_count - 2 -- Adjust to append after ASSISTANT_START
+				table.insert(output_lines, ASSISTANT_START)
+			end
+			local updated_last_line = last_line .. new_lines[1]
+			table.insert(output_lines, updated_last_line)
+			for i = 2, #new_lines do
+				table.insert(output_lines, new_lines[i])
 			end
 		end
 
-		-- Update buffer: replace spinner line or append after last <assistant>
-		local start_line = (last_line:match("^[-/\\]$") and second_to_last_line == ASSISTANT_START) and (line_count - 1)
-			or line_count
+		-- Update buffer: replace from the spinner line or append after ASSISTANT_START
+		local start_line = (last_line:match("^[-/\\]$") and second_to_last_line == ASSISTANT_START) and (line_count - 2)
+			or (line_count - 1)
+		if second_to_last_line == ASSISTANT_START and not last_line:match("^[-/\\]$") then
+			start_line = line_count - 2 -- Append after ASSISTANT_START
+		end
 		vim.api.nvim_buf_set_lines(buf, start_line, line_count, false, output_lines)
 		cursor_to_bottom(buf)
 	end)
@@ -332,7 +344,7 @@ function M.state_manager()
 
 		local marker_index
 		for i = #lines, 1, -1 do
-			if lines[i]:match("</assistant>") then
+			if lines[i]:match(vim.pesc(ASSISTANT_END)) then
 				marker_index = i
 				break
 			end
