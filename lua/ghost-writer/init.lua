@@ -24,19 +24,6 @@ local function cursor_to_bottom(buf)
 	end
 end
 
-local function write_conversation_history()
-	local filepath = vim.fn.getcwd() .. "/conversation_history.json"
-	local history_file = io.open(filepath, "w")
-	if history_file then
-		local json_history = vim.json.encode(conversation_history)
-		history_file:write(json_history)
-		history_file:close()
-		write_debug("Successfully wrote conversation history to " .. filepath)
-	else
-		write_debug("Failed to open " .. filepath .. " for writing - check permissions")
-	end
-end
-
 local function waiting(buf)
 	local char_seq = { "-", "\\", "/" }
 	local timer = vim.loop.new_timer()
@@ -223,7 +210,6 @@ function M.make_request(messages, buf)
 				role = "assistant",
 				content = response,
 			})
-			print(vim.inspect(conversation_history))
 			response = ""
 			active_job = nil
 		end,
@@ -232,8 +218,6 @@ function M.make_request(messages, buf)
 	})
 
 	active_job:start()
-
-	write_conversation_history()
 
 	vim.api.nvim_create_autocmd("User", {
 		group = group,
@@ -374,7 +358,6 @@ function M.state_manager()
 					role = "user",
 					content = user_message,
 				})
-				write_conversation_history()
 
 				M.make_request(conversation_history, context.buf)
 			end
@@ -393,18 +376,6 @@ function M.state_manager()
 		end,
 	}
 end
-
--- [[
--- TODO:
--- add some more spacing to printout
--- each streaming response is getting put in its own object for message history - it should all be one response for the assistant
--- fix this bug:
--- Error executing vim.schedule lua callback: ...ode/personal/ghost-writer.nvim/lua/ghost-writer/init.lua:78: 'replacement string' item contains newlines
--- stack traceback:
---         [C]: in function 'nvim_buf_set_lines'
---         ...ode/personal/ghost-writer.nvim/lua/ghost-writer/init.lua:78: in function <...ode/personal/ghost-writer.nvim/lua/ghost-writer/init.lua:61>
---
--- ]]
 
 function M.setup(opts)
 	M.config = opts
