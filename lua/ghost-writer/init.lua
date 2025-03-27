@@ -136,12 +136,15 @@ end
 local group = vim.api.nvim_create_augroup("LLM", { clear = true })
 local active_job = nil
 
-local function parse_stream(data, event_based)
+local function parse_stream(data, event_based, streaming)
+	if streaming then
+		return "non_steaming", data:match("^content: (.+)$")
+	end
 	if event_based and data:match("^event: ") then
-		return "event", data:match("^event: (.+)$")
+		return "stream_event", data:match("^event: (.+)$")
 	end
 	if data:match("^data: ") then
-		return "data", data:match("^data: (.+)$")
+		return "stream_data", data:match("^data: (.+)$")
 	end
 end
 
@@ -160,22 +163,28 @@ function M.make_request(messages, buf)
 		active_job = nil
 	end
 
-	local formatted_messages = messages
+	local local_args = curl_args_fn(provider_opts, messages)
 
-	local local_args = curl_args_fn(provider_opts, formatted_messages)
+	print(vim.inspect(local_args))
 
 	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
 		if not data then
 			return curr_state
 		end
 
-		local type, content = parse_stream(data, opts.event_based)
+		-- going to need to check here if streaming or not
 
-		if type == "data" then
+		local type, content = parse_stream(data, opts.event_based, opts.stream)
+
+		if type == "stream_data" then
 			handle_data_fn(content, curr_state, buffer, task)
 		end
 
-		return type == "event" and content or curr_state
+		if type == "non_stream" then
+			print(content)
+		end
+
+		return type == "stream_event" and content or curr_state
 	end
 
 	active_job = Job:new({
