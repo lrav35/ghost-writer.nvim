@@ -51,6 +51,8 @@ local function parse_and_output_message(buf, result, spinner_timer)
 			return
 		end
 
+		print("in parse and output")
+
 		-- Parse the JSON result, fallback to raw text if parsing fails
 		local success, parsed = pcall(vim.json.decode, result)
 		local text = parsed.delta and parsed.delta.text or (success and parsed.text) or result
@@ -106,6 +108,32 @@ local function parse_and_output_message(buf, result, spinner_timer)
 	end)
 end
 
+local function parse_and_output_message_redacted(buf, text, spinner_timer)
+	vim.schedule(function()
+		if not vim.api.nvim_buf_is_valid(buf) then
+			return
+		end
+
+		if not text or text == "" then
+			return
+		end
+
+		-- Stop and clean up the spinner
+		if spinner_timer then
+			spinner_timer:stop()
+			spinner_timer:close()
+		end
+
+		-- Prepare the lines to insert
+		local new_lines = vim.split(text, "\n", { plain = true })
+
+		-- Insert the assistant's response into the buffer
+		local line_count = vim.api.nvim_buf_line_count(buf)
+		vim.api.nvim_buf_set_lines(buf, line_count - 1, line_count, false, new_lines)
+		cursor_to_bottom(buf)
+	end)
+end
+
 local function manage_task(task)
 	if not task then
 		return
@@ -118,18 +146,25 @@ local function manage_task(task)
 	end
 end
 
-function M.handle_stream_data(opts)
-	return function(stream, state, buf, task)
-		if opts.event_based and state ~= opts.target_state then
-			return
-		end
+function M.handle_stream_data(opts, stream, state, buf, task)
+	if opts.event_based and state ~= opts.target_state then
+		return
+	end
 
-		manage_task(task)
+	manage_task(task)
 
-		local content = opts.parser(stream)
-		if content then
-			parse_and_output_message(buf, content)
-		end
+	local content = opts.parser(stream)
+	if content then
+		parse_and_output_message(buf, content)
+	end
+end
+
+function M.handle_non_stream_data(opts, stream, buf, task)
+	manage_task(task)
+
+	local content = opts.parser(stream)
+	if content then
+		parse_and_output_message_redacted(buf, content)
 	end
 end
 
@@ -138,13 +173,13 @@ local active_job = nil
 
 local function parse_stream(data, event_based, streaming)
 	if streaming then
-		return "non_steaming", data:match("^content: (.+)$")
-	end
-	if event_based and data:match("^event: ") then
+		return "non_stream", data
+	elseif event_based and data:match("^event: ") then
 		return "stream_event", data:match("^event: (.+)$")
-	end
-	if data:match("^data: ") then
+	elseif data:match("^data: ") then
 		return "stream_data", data:match("^data: (.+)$")
+	else
+		return "non_stream", data
 	end
 end
 
@@ -164,11 +199,15 @@ function M.make_request(messages, buf)
 	end
 
 	local local_args = curl_args_fn(provider_opts, messages)
-
 	print(vim.inspect(local_args))
 
-	local function handle_stdout(data, curr_state, buffer, task, handle_data_fn, opts)
-		if not data then
+	local function handle_stdout(data, curr_state, buffer, task, opts)
+		vim.schedule(function()
+			print("data: " .. vim.inspect(data))
+		end)
+
+		if not data or data == "" then
+			print("no data received")
 			return curr_state
 		end
 
@@ -176,12 +215,17 @@ function M.make_request(messages, buf)
 
 		local type, content = parse_stream(data, opts.event_based, opts.stream)
 
+		vim.schedule(function()
+			print(type)
+			print(vim.inspect(content))
+		end)
+
 		if type == "stream_data" then
-			handle_data_fn(content, curr_state, buffer, task)
+			M.handle_stream_data(opts, content, curr_state, buffer, task)
 		end
 
-		if type == "non_stream" then
-			print(content)
+		if type == "non_streaming" then
+			M.handle_non_stream_data(opts, content, buf, task)
 		end
 
 		return type == "stream_event" and content or curr_state
@@ -190,19 +234,27 @@ function M.make_request(messages, buf)
 	active_job = Job:new({
 		command = "curl",
 		args = local_args,
-		on_stdout = function(_, data)
-			write_debug("STDOUT: " .. vim.inspect(data))
-			curr_event_state = handle_stdout(
-				data,
-				curr_event_state,
-				buf,
-				waiting_task,
-				M.handle_stream_data(provider_opts),
-				provider_opts
-			)
+		on_stdout = function(err, data)
+			write_debug("Entered on_stdout")
+			write_debug("STDOUT ERR: " .. vim.inspect(err))
+			write_debug("STDOUT DATA: " .. vim.inspect(data))
+			if data then
+				curr_event_state = handle_stdout(data, curr_event_state, buf, waiting_task, provider_opts)
+			else
+				write_debug("No data received in on_stdout")
+			end
 		end,
-		on_stderr = function(_, data)
-			write_debug("STDERR: " .. vim.inspect(data))
+		-- on_stdout = function(_, data)
+		-- 	write_debug("STDOUT: " .. vim.inspect(data))
+		-- 	curr_event_state = handle_stdout(data, curr_event_state, buf, waiting_task, provider_opts)
+		-- end,
+		-- on_stderr = function(_, data)
+		-- 	write_debug("STDERR: " .. vim.inspect(data))
+		-- end,
+		on_stderr = function(err, data)
+			write_debug("Entered on_stderr")
+			write_debug("STDERR ERR: " .. vim.inspect(err))
+			write_debug("STDERR DATA: " .. vim.inspect(data))
 		end,
 		on_exit = function(_, data)
 			write_debug("STDEXIT: " .. vim.inspect(data))

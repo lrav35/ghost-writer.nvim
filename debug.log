@@ -1,0 +1,2405 @@
+Wed Mar 26 09:37:23 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Wed Mar 26 09:37:23 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Wed Mar 26 09:37:28 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0* Could not resolve host: REDACTED_API_URL"
+Wed Mar 26 09:37:28 2025 - STDERR: "* Closing connection"
+Wed Mar 26 09:37:28 2025 - STDERR: "curl: (6) Could not resolve host: REDACTED_API_URL"
+Wed Mar 26 09:37:28 2025 - STDERR: nil
+Wed Mar 26 09:37:28 2025 - STDEXIT: 6
+Wed Mar 26 09:42:39 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Wed Mar 26 09:42:39 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Wed Mar 26 09:42:44 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0* Could not resolve host: REDACTED_API_URL"
+Wed Mar 26 09:42:44 2025 - STDERR: "* Closing connection"
+Wed Mar 26 09:42:44 2025 - STDERR: "curl: (6) Could not resolve host: REDACTED_API_URL"
+Wed Mar 26 09:42:44 2025 - STDEXIT: 6
+Thu Mar 27 09:23:03 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:23:03 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:23:08 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0* Could not resolve host: REDACTED_API_URL"
+Thu Mar 27 09:23:08 2025 - STDERR: "* Closing connection"
+Thu Mar 27 09:23:08 2025 - STDERR: "curl: (6) Could not resolve host: REDACTED_API_URL"
+Thu Mar 27 09:23:08 2025 - STDEXIT: 6
+Thu Mar 27 09:31:02 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:31:02 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:31:07 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0* Could not resolve host: REDACTED_API_URL"
+Thu Mar 27 09:31:07 2025 - STDERR: "* Closing connection"
+Thu Mar 27 09:31:07 2025 - STDERR: "curl: (6) Could not resolve host: REDACTED_API_URL"
+Thu Mar 27 09:31:07 2025 - STDEXIT: 6
+Thu Mar 27 09:39:32 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:39:32 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:39:32 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 09:39:32 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 09:39:32 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 09:39:32 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 09:39:32 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 09:39:32 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 09:39:32 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 09:39:32 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 09:39:32 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [89 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [4092 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [333 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [4 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Thu Mar 27 09:39:32 2025 - STDERR: "} [70 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:39:32 2025 - STDERR: "} [1 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Thu Mar 27 09:39:32 2025 - STDERR: "} [16 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [1 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [16 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Thu Mar 27 09:39:32 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Thu Mar 27 09:39:32 2025 - STDERR: "* Server certificate:"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Thu Mar 27 09:39:32 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Thu Mar 27 09:39:32 2025 - STDERR: "*  SSL certificate verify ok."
+Thu Mar 27 09:39:32 2025 - STDERR: "* using HTTP/1.x"
+Thu Mar 27 09:39:32 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Thu Mar 27 09:39:32 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Thu Mar 27 09:39:32 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Thu Mar 27 09:39:32 2025 - STDERR: "> Accept: */*"
+Thu Mar 27 09:39:32 2025 - STDERR: "> Content-Type: application/json"
+Thu Mar 27 09:39:32 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Thu Mar 27 09:39:32 2025 - STDERR: "> use-case: local development assistance"
+Thu Mar 27 09:39:32 2025 - STDERR: "> Content-Length: 236"
+Thu Mar 27 09:39:32 2025 - STDERR: "> "
+Thu Mar 27 09:39:32 2025 - STDERR: "} [236 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "* upload completely sent off: 236 bytes"
+Thu Mar 27 09:39:32 2025 - STDERR: "< HTTP/1.1 400 "
+Thu Mar 27 09:39:32 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Date: Thu, 27 Mar 2025 13:39:32 GMT"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Expires: 0"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Pragma: no-cache"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Vary: Origin"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Thu Mar 27 09:39:32 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Thu Mar 27 09:39:32 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Thu Mar 27 09:39:32 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Thu Mar 27 09:39:32 2025 - STDERR: "< transfer-encoding: chunked"
+Thu Mar 27 09:39:32 2025 - STDERR: "< Connection: keep-alive"
+Thu Mar 27 09:39:32 2025 - STDERR: "< "
+Thu Mar 27 09:39:32 2025 - STDERR: "{ [225 bytes data]"
+Thu Mar 27 09:39:32 2025 - STDERR: "100   455    0   219  100   236    848    914 --:--:-- --:--:-- --:--:--  1770"
+Thu Mar 27 09:39:32 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Thu Mar 27 09:39:32 2025 - STDEXIT: 0
+Thu Mar 27 09:45:23 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:45:23 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:45:23 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 09:45:23 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 09:45:23 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 09:45:23 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 09:45:23 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 09:45:23 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 09:45:23 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 09:45:23 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 09:45:23 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [89 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [4092 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [333 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [4 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Thu Mar 27 09:45:23 2025 - STDERR: "} [70 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:45:23 2025 - STDERR: "} [1 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Thu Mar 27 09:45:23 2025 - STDERR: "} [16 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [1 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Thu Mar 27 09:45:23 2025 - STDERR: "{ [16 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Thu Mar 27 09:45:23 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Thu Mar 27 09:45:23 2025 - STDERR: "* Server certificate:"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Thu Mar 27 09:45:23 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Thu Mar 27 09:45:23 2025 - STDERR: "*  SSL certificate verify ok."
+Thu Mar 27 09:45:23 2025 - STDERR: "* using HTTP/1.x"
+Thu Mar 27 09:45:23 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Thu Mar 27 09:45:23 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Thu Mar 27 09:45:23 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Thu Mar 27 09:45:23 2025 - STDERR: "> Accept: */*"
+Thu Mar 27 09:45:23 2025 - STDERR: "> Content-Type: application/json"
+Thu Mar 27 09:45:23 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Thu Mar 27 09:45:23 2025 - STDERR: "> use-case: local development assistance"
+Thu Mar 27 09:45:23 2025 - STDERR: "> Content-Length: 107"
+Thu Mar 27 09:45:23 2025 - STDERR: "> "
+Thu Mar 27 09:45:23 2025 - STDERR: "} [107 bytes data]"
+Thu Mar 27 09:45:23 2025 - STDERR: "* upload completely sent off: 107 bytes"
+Thu Mar 27 09:45:24 2025 - STDERR: "< HTTP/1.1 400 "
+Thu Mar 27 09:45:24 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Date: Thu, 27 Mar 2025 13:45:24 GMT"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Expires: 0"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Pragma: no-cache"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Vary: Origin"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Thu Mar 27 09:45:24 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Thu Mar 27 09:45:24 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Thu Mar 27 09:45:24 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Thu Mar 27 09:45:24 2025 - STDERR: "< transfer-encoding: chunked"
+Thu Mar 27 09:45:24 2025 - STDERR: "< Connection: keep-alive"
+Thu Mar 27 09:45:24 2025 - STDERR: "< "
+Thu Mar 27 09:45:24 2025 - STDERR: "{ [312 bytes data]"
+Thu Mar 27 09:45:24 2025 - STDERR: "100   412    0   305  100   107   1107    388 --:--:-- --:--:-- --:--:--  1498"
+Thu Mar 27 09:45:24 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Thu Mar 27 09:45:24 2025 - STDEXIT: 0
+Thu Mar 27 09:56:18 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:56:18 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:56:18 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 09:56:18 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 09:56:18 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 09:56:18 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 09:56:18 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 09:56:18 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 09:56:18 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 09:56:18 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 09:56:18 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [89 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [4092 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [333 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [4 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Thu Mar 27 09:56:18 2025 - STDERR: "} [70 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:56:18 2025 - STDERR: "} [1 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Thu Mar 27 09:56:18 2025 - STDERR: "} [16 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [1 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [16 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Thu Mar 27 09:56:18 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Thu Mar 27 09:56:18 2025 - STDERR: "* Server certificate:"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Thu Mar 27 09:56:18 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Thu Mar 27 09:56:18 2025 - STDERR: "*  SSL certificate verify ok."
+Thu Mar 27 09:56:18 2025 - STDERR: "* using HTTP/1.x"
+Thu Mar 27 09:56:18 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Thu Mar 27 09:56:18 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Thu Mar 27 09:56:18 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Thu Mar 27 09:56:18 2025 - STDERR: "> Accept: */*"
+Thu Mar 27 09:56:18 2025 - STDERR: "> Content-Type: application/json"
+Thu Mar 27 09:56:18 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Thu Mar 27 09:56:18 2025 - STDERR: "> use-case: local development assistance"
+Thu Mar 27 09:56:18 2025 - STDERR: "> Content-Length: 91"
+Thu Mar 27 09:56:18 2025 - STDERR: "> "
+Thu Mar 27 09:56:18 2025 - STDERR: "} [91 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "* upload completely sent off: 91 bytes"
+Thu Mar 27 09:56:18 2025 - STDERR: "< HTTP/1.1 400 "
+Thu Mar 27 09:56:18 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Date: Thu, 27 Mar 2025 13:56:18 GMT"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Expires: 0"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Pragma: no-cache"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Vary: Origin"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Thu Mar 27 09:56:18 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Thu Mar 27 09:56:18 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Thu Mar 27 09:56:18 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Thu Mar 27 09:56:18 2025 - STDERR: "< transfer-encoding: chunked"
+Thu Mar 27 09:56:18 2025 - STDERR: "< Connection: keep-alive"
+Thu Mar 27 09:56:18 2025 - STDERR: "< "
+Thu Mar 27 09:56:18 2025 - STDERR: "{ [312 bytes data]"
+Thu Mar 27 09:56:18 2025 - STDERR: "100   396    0   305  100    91   1087    324 --:--:-- --:--:-- --:--:--  1414"
+Thu Mar 27 09:56:18 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Thu Mar 27 09:56:18 2025 - STDEXIT: 0
+Thu Mar 27 09:58:51 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 09:58:51 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 09:58:51 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 09:58:51 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 09:58:51 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 09:58:51 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 09:58:51 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 09:58:51 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 09:58:51 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 09:58:51 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 09:58:51 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [89 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [4092 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [333 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [4 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Thu Mar 27 09:58:51 2025 - STDERR: "} [70 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:58:51 2025 - STDERR: "} [1 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Thu Mar 27 09:58:51 2025 - STDERR: "} [16 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [1 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Thu Mar 27 09:58:51 2025 - STDERR: "{ [16 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Thu Mar 27 09:58:51 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Thu Mar 27 09:58:51 2025 - STDERR: "* Server certificate:"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Thu Mar 27 09:58:51 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Thu Mar 27 09:58:51 2025 - STDERR: "*  SSL certificate verify ok."
+Thu Mar 27 09:58:51 2025 - STDERR: "* using HTTP/1.x"
+Thu Mar 27 09:58:51 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Thu Mar 27 09:58:51 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Thu Mar 27 09:58:51 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Thu Mar 27 09:58:51 2025 - STDERR: "> Accept: */*"
+Thu Mar 27 09:58:51 2025 - STDERR: "> Content-Type: application/json"
+Thu Mar 27 09:58:51 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Thu Mar 27 09:58:51 2025 - STDERR: "> use-case: local development assistance"
+Thu Mar 27 09:58:51 2025 - STDERR: "> Content-Length: 45"
+Thu Mar 27 09:58:51 2025 - STDERR: "> "
+Thu Mar 27 09:58:51 2025 - STDERR: "} [45 bytes data]"
+Thu Mar 27 09:58:51 2025 - STDERR: "* upload completely sent off: 45 bytes"
+Thu Mar 27 09:59:00 2025 - STDERR: "100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14100    45    0     0  100    45      0     10  0:00:04  0:00:04 --:--:--    10100    45    0     0  100    45      0      8  0:00:05  0:00:05 --:--:--     8100    45    0     0  100    45      0      7  0:00:06  0:00:06 --:--:--     0100    45    0     0  100    45      0      6  0:00:07  0:00:07 --:--:--     0100    45    0     0  100    45      0      5  0:00:09  0:00:08  0:00:01     0100    45    0     0  100    45      0      4  0:00:11  0:00:09  0:00:02     0< HTTP/1.1 200 "
+Thu Mar 27 09:59:00 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Date: Thu, 27 Mar 2025 13:59:00 GMT"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Expires: 0"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Pragma: no-cache"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Vary: Origin"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Thu Mar 27 09:59:00 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Thu Mar 27 09:59:00 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Thu Mar 27 09:59:00 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Thu Mar 27 09:59:00 2025 - STDERR: "< transfer-encoding: chunked"
+Thu Mar 27 09:59:00 2025 - STDERR: "< Connection: keep-alive"
+Thu Mar 27 09:59:00 2025 - STDERR: "< "
+Thu Mar 27 09:59:00 2025 - STDERR: "{ [1220 bytes data]"
+Thu Mar 27 09:59:00 2025 - STDERR: "100  1258    0  1213  100    45    130      4  0:00:11  0:00:09  0:00:02   291"
+Thu Mar 27 09:59:00 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Thu Mar 27 09:59:00 2025 - STDEXIT: 0
+Thu Mar 27 10:05:14 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 10:05:14 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 10:05:14 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 10:05:14 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 10:05:14 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 10:05:14 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 10:05:14 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 10:05:14 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 10:05:14 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 10:05:14 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 10:05:14 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [89 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [4092 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [333 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [4 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Thu Mar 27 10:05:14 2025 - STDERR: "} [70 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 10:05:14 2025 - STDERR: "} [1 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Thu Mar 27 10:05:14 2025 - STDERR: "} [16 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [1 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Thu Mar 27 10:05:14 2025 - STDERR: "{ [16 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Thu Mar 27 10:05:14 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Thu Mar 27 10:05:14 2025 - STDERR: "* Server certificate:"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Thu Mar 27 10:05:14 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Thu Mar 27 10:05:14 2025 - STDERR: "*  SSL certificate verify ok."
+Thu Mar 27 10:05:14 2025 - STDERR: "* using HTTP/1.x"
+Thu Mar 27 10:05:14 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Thu Mar 27 10:05:14 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Thu Mar 27 10:05:14 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Thu Mar 27 10:05:14 2025 - STDERR: "> Accept: */*"
+Thu Mar 27 10:05:14 2025 - STDERR: "> Content-Type: application/json"
+Thu Mar 27 10:05:14 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Thu Mar 27 10:05:14 2025 - STDERR: "> use-case: local development assistance"
+Thu Mar 27 10:05:14 2025 - STDERR: "> Content-Length: 46"
+Thu Mar 27 10:05:14 2025 - STDERR: "> "
+Thu Mar 27 10:05:14 2025 - STDERR: "} [46 bytes data]"
+Thu Mar 27 10:05:14 2025 - STDERR: "* upload completely sent off: 46 bytes"
+Thu Mar 27 10:05:19 2025 - STDERR: "100    46    0     0  100    46      0     41  0:00:01  0:00:01 --:--:--    41100    46    0     0  100    46      0     21  0:00:02  0:00:02 --:--:--    21100    46    0     0  100    46      0     14  0:00:03  0:00:03 --:--:--    14100    46    0     0  100    46      0     11  0:00:04  0:00:04 --:--:--    11100    46    0     0  100    46      0      8  0:00:05  0:00:05 --:--:--     8< HTTP/1.1 200 "
+Thu Mar 27 10:05:19 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Date: Thu, 27 Mar 2025 14:05:19 GMT"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Expires: 0"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Pragma: no-cache"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Vary: Origin"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Thu Mar 27 10:05:19 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Thu Mar 27 10:05:19 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Thu Mar 27 10:05:19 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Thu Mar 27 10:05:19 2025 - STDERR: "< transfer-encoding: chunked"
+Thu Mar 27 10:05:19 2025 - STDERR: "< Connection: keep-alive"
+Thu Mar 27 10:05:19 2025 - STDERR: "< "
+Thu Mar 27 10:05:19 2025 - STDERR: "{ [1220 bytes data]"
+Thu Mar 27 10:05:19 2025 - STDERR: "100  1259    0  1213  100    46    219      8  0:00:05  0:00:05 --:--:--   274"
+Thu Mar 27 10:05:19 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Thu Mar 27 10:05:19 2025 - STDEXIT: 0
+Thu Mar 27 10:17:28 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Thu Mar 27 10:17:28 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Thu Mar 27 10:17:28 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Thu Mar 27 10:17:28 2025 - STDERR: "* IPv6: (none)"
+Thu Mar 27 10:17:28 2025 - STDERR: "* IPv4: 100.64.1.23"
+Thu Mar 27 10:17:28 2025 - STDERR: "*   Trying 100.64.1.23:443..."
+Thu Mar 27 10:17:28 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.23) port 443"
+Thu Mar 27 10:17:28 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Thu Mar 27 10:17:28 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Thu Mar 27 10:17:28 2025 - STDERR: "} [324 bytes data]"
+Thu Mar 27 10:17:28 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Thu Mar 27 10:17:28 2025 - STDERR: "*  CApath: none"
+Thu Mar 27 10:17:28 2025 - STDERR: "* LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cortex.aws.lmig.com:443 "
+Thu Mar 27 10:17:28 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+Thu Mar 27 10:17:28 2025 - STDERR: "* Closing connection"
+Thu Mar 27 10:17:28 2025 - STDERR: "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cortex.aws.lmig.com:443 "
+Thu Mar 27 10:17:28 2025 - STDEXIT: 35
+Fri Mar 28 08:46:44 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 08:46:44 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 08:46:52 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 08:46:52 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 08:46:52 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 08:46:52 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 08:46:52 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 08:46:52 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 08:46:52 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 08:46:52 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 08:46:52 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 08:46:52 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:46:52 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 08:46:52 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 08:46:52 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 08:46:52 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 08:46:52 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 08:46:52 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 08:46:52 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 08:46:52 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 08:46:52 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 08:46:52 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 08:46:52 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 08:46:52 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 08:46:52 2025 - STDERR: "> Authorization: Bearer ctx_OYkWL0GsGvbDG59zYOXzPLUIi8GfA5J7KSj"
+Fri Mar 28 08:46:52 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 08:46:52 2025 - STDERR: "> Content-Length: 45"
+Fri Mar 28 08:46:52 2025 - STDERR: "> "
+Fri Mar 28 08:46:52 2025 - STDERR: "} [45 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "* upload completely sent off: 45 bytes"
+Fri Mar 28 08:46:52 2025 - STDERR: "< HTTP/1.1 401 "
+Fri Mar 28 08:46:52 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Content-Type: application/json"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Date: Fri, 28 Mar 2025 12:46:52 GMT"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 08:46:52 2025 - STDERR: "< WWW-Authenticate: Cortex"
+Fri Mar 28 08:46:52 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 08:46:52 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 08:46:52 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 08:46:52 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 08:46:52 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 08:46:52 2025 - STDERR: "< "
+Fri Mar 28 08:46:52 2025 - STDERR: "{ [137 bytes data]"
+Fri Mar 28 08:46:52 2025 - STDERR: "100   171    0   126  100    45     16      5  0:00:09  0:00:07  0:00:02    39"
+Fri Mar 28 08:46:52 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 08:46:52 2025 - STDEXIT: 0
+Fri Mar 28 08:52:19 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 08:52:19 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 08:52:19 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 08:52:19 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 08:52:19 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 08:52:19 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 08:52:19 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 08:52:19 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 08:52:19 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 08:52:19 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 08:52:19 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 08:52:19 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:52:19 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 08:52:19 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 08:52:19 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 08:52:19 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 08:52:19 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 08:52:19 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 08:52:19 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 08:52:19 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 08:52:19 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 08:52:19 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 08:52:19 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 08:52:19 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 08:52:19 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 08:52:19 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 08:52:19 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 08:52:19 2025 - STDERR: "> Content-Length: 45"
+Fri Mar 28 08:52:19 2025 - STDERR: "> "
+Fri Mar 28 08:52:19 2025 - STDERR: "} [45 bytes data]"
+Fri Mar 28 08:52:19 2025 - STDERR: "* upload completely sent off: 45 bytes"
+Fri Mar 28 08:52:24 2025 - STDERR: "100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14100    45    0     0  100    45      0     10  0:00:04  0:00:04 --:--:--    10< HTTP/1.1 200 "
+Fri Mar 28 08:52:24 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Date: Fri, 28 Mar 2025 12:52:24 GMT"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 08:52:24 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 08:52:24 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 08:52:24 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 08:52:24 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 08:52:24 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 08:52:24 2025 - STDERR: "< "
+Fri Mar 28 08:52:24 2025 - STDERR: "{ [1220 bytes data]"
+Fri Mar 28 08:52:24 2025 - STDERR: "100  1258    0  1213  100    45    270     10  0:00:04  0:00:04 --:--:--   280100  1258    0  1213  100    45    270     10  0:00:04  0:00:04 --:--:--   360"
+Fri Mar 28 08:52:24 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 08:52:24 2025 - STDEXIT: 0
+Fri Mar 28 08:52:55 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 08:52:55 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 08:52:55 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 08:52:55 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 08:52:55 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 08:52:55 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 08:52:55 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 08:52:55 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 08:52:55 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 08:52:55 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 08:52:55 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 08:52:55 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:52:55 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 08:52:55 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 08:52:55 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 08:52:55 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 08:52:55 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 08:52:55 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 08:52:55 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 08:52:55 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 08:52:55 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 08:52:55 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 08:52:55 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 08:52:55 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 08:52:55 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 08:52:55 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 08:52:55 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 08:52:55 2025 - STDERR: "> Content-Length: 65"
+Fri Mar 28 08:52:55 2025 - STDERR: "> "
+Fri Mar 28 08:52:55 2025 - STDERR: "} [65 bytes data]"
+Fri Mar 28 08:52:55 2025 - STDERR: "* upload completely sent off: 65 bytes"
+Fri Mar 28 08:52:59 2025 - STDERR: "100    65    0     0  100    65      0     59  0:00:01  0:00:01 --:--:--    59100    65    0     0  100    65      0     30  0:00:02  0:00:02 --:--:--    30100    65    0     0  100    65      0     20  0:00:03  0:00:03 --:--:--    20< HTTP/1.1 200 "
+Fri Mar 28 08:52:59 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Date: Fri, 28 Mar 2025 12:52:59 GMT"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 08:52:59 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 08:52:59 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 08:52:59 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 08:52:59 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 08:52:59 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 08:52:59 2025 - STDERR: "< "
+Fri Mar 28 08:52:59 2025 - STDERR: "{ [1236 bytes data]"
+Fri Mar 28 08:52:59 2025 - STDERR: "100  1294    0  1229  100    65    376     19  0:00:03  0:00:03 --:--:--   396100  1294    0  1229  100    65    376     19  0:00:03  0:00:03 --:--:--   396"
+Fri Mar 28 08:52:59 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 08:52:59 2025 - STDEXIT: 0
+Fri Mar 28 08:57:56 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 08:57:56 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 08:57:56 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 08:57:56 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 08:57:56 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 08:57:56 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 08:57:56 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 08:57:56 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 08:57:56 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 08:57:56 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 08:57:56 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 08:57:56 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:57:56 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 08:57:56 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 08:57:56 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 08:57:56 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 08:57:56 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 08:57:56 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 08:57:56 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 08:57:56 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 08:57:56 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 08:57:56 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 08:57:56 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 08:57:56 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 08:57:56 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 08:57:56 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 08:57:56 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 08:57:56 2025 - STDERR: "> Content-Length: 64"
+Fri Mar 28 08:57:56 2025 - STDERR: "> "
+Fri Mar 28 08:57:56 2025 - STDERR: "} [64 bytes data]"
+Fri Mar 28 08:57:56 2025 - STDERR: "* upload completely sent off: 64 bytes"
+Fri Mar 28 08:58:03 2025 - STDERR: "100    64    0     0  100    64      0     57  0:00:01  0:00:01 --:--:--    57100    64    0     0  100    64      0     30  0:00:02  0:00:02 --:--:--    30100    64    0     0  100    64      0     20  0:00:03  0:00:03 --:--:--    20100    64    0     0  100    64      0     15  0:00:04  0:00:04 --:--:--    15100    64    0     0  100    64      0     12  0:00:05  0:00:05 --:--:--    12100    64    0     0  100    64      0     10  0:00:06  0:00:06 --:--:--     0100    64    0     0  100    64      0      8  0:00:08  0:00:07  0:00:01     0< HTTP/1.1 200 "
+Fri Mar 28 08:58:03 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Date: Fri, 28 Mar 2025 12:58:04 GMT"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 08:58:03 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 08:58:03 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 08:58:03 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 08:58:03 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 08:58:03 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 08:58:03 2025 - STDERR: "< "
+Fri Mar 28 08:58:03 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 08:58:03 2025 - STDERR: "100  1192    0  1128  100    64    142      8  0:00:08  0:00:07  0:00:01   235100  1192    0  1128  100    64    142      8  0:00:08  0:00:07  0:00:01   297"
+Fri Mar 28 08:58:03 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 08:58:03 2025 - STDEXIT: 0
+Fri Mar 28 09:00:13 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:00:13 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:00:13 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:00:13 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:00:13 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:00:13 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:00:13 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:00:13 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:00:13 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:00:13 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:00:13 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:00:13 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:00:13 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:00:13 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:00:13 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:00:13 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:00:13 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:00:13 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:00:13 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:00:13 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:00:14 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:00:14 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:00:14 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:00:14 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:00:14 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:00:14 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:00:14 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:00:14 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:00:14 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:00:14 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:00:14 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:00:14 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:00:14 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:00:14 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:00:14 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:00:14 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:00:14 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:00:14 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:00:14 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:00:14 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:00:14 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:00:14 2025 - STDERR: "> Content-Length: 58"
+Fri Mar 28 09:00:14 2025 - STDERR: "> "
+Fri Mar 28 09:00:14 2025 - STDERR: "} [58 bytes data]"
+Fri Mar 28 09:00:14 2025 - STDERR: "* upload completely sent off: 58 bytes"
+Fri Mar 28 09:00:16 2025 - STDERR: "100    58    0     0  100    58      0     52  0:00:01  0:00:01 --:--:--    52100    58    0     0  100    58      0     27  0:00:02  0:00:02 --:--:--    27< HTTP/1.1 200 "
+Fri Mar 28 09:00:16 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:00:15 GMT"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:00:16 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:00:16 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:00:16 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:00:16 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:00:16 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:00:16 2025 - STDERR: "< "
+Fri Mar 28 09:00:16 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:00:16 2025 - STDERR: "100  1186    0  1128  100    58    520     26  0:00:02  0:00:02 --:--:--   547"
+Fri Mar 28 09:00:16 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:00:16 2025 - STDEXIT: 0
+Fri Mar 28 09:10:27 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:10:27 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:10:27 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:10:27 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:10:27 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:10:27 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:10:27 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:10:27 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:10:27 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:10:27 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:10:27 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:10:27 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:10:27 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:10:27 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:10:27 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:10:27 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:10:27 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:10:27 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:10:27 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:10:27 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:10:27 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:10:27 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:10:27 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:10:27 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:10:27 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:10:27 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:10:27 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:10:27 2025 - STDERR: "> Content-Length: 58"
+Fri Mar 28 09:10:27 2025 - STDERR: "> "
+Fri Mar 28 09:10:27 2025 - STDERR: "} [58 bytes data]"
+Fri Mar 28 09:10:27 2025 - STDERR: "* upload completely sent off: 58 bytes"
+Fri Mar 28 09:10:31 2025 - STDERR: "100    58    0     0  100    58      0     51  0:00:01  0:00:01 --:--:--    51100    58    0     0  100    58      0     27  0:00:02  0:00:02 --:--:--    27100    58    0     0  100    58      0     18  0:00:03  0:00:03 --:--:--    18< HTTP/1.1 200 "
+Fri Mar 28 09:10:31 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:10:30 GMT"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:10:31 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:10:31 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:10:31 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:10:31 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:10:31 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:10:31 2025 - STDERR: "< "
+Fri Mar 28 09:10:31 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:10:31 2025 - STDERR: "100  1186    0  1128  100    58    304     15  0:00:03  0:00:03 --:--:--   320100  1186    0  1128  100    58    304     15  0:00:03  0:00:03 --:--:--   320"
+Fri Mar 28 09:10:31 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:10:31 2025 - STDEXIT: 0
+Fri Mar 28 09:21:12 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:21:12 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:21:12 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:21:12 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:21:12 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:21:12 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:21:12 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:21:12 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:21:12 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:21:12 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:21:12 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:21:12 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:21:12 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:21:12 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:21:12 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:21:12 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:21:12 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:21:12 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:21:12 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:21:12 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:21:12 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:21:12 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:21:12 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:21:12 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:21:12 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:21:12 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:21:12 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:21:12 2025 - STDERR: "> Content-Length: 58"
+Fri Mar 28 09:21:12 2025 - STDERR: "> "
+Fri Mar 28 09:21:12 2025 - STDERR: "} [58 bytes data]"
+Fri Mar 28 09:21:12 2025 - STDERR: "* upload completely sent off: 58 bytes"
+Fri Mar 28 09:21:18 2025 - STDERR: "100    58    0     0  100    58      0     51  0:00:01  0:00:01 --:--:--    51100    58    0     0  100    58      0     27  0:00:02  0:00:02 --:--:--    27100    58    0     0  100    58      0     18  0:00:03  0:00:03 --:--:--    18100    58    0     0  100    58      0     13  0:00:04  0:00:04 --:--:--    13100    58    0     0  100    58      0     11  0:00:05  0:00:05 --:--:--    11< HTTP/1.1 200 "
+Fri Mar 28 09:21:18 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:21:18 GMT"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:21:18 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:21:18 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:21:18 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:21:18 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:21:18 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:21:18 2025 - STDERR: "< "
+Fri Mar 28 09:21:18 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:21:18 2025 - STDERR: "100  1186    0  1128  100    58    193      9  0:00:06  0:00:05  0:00:01   239100  1186    0  1128  100    58    193      9  0:00:06  0:00:05  0:00:01   305"
+Fri Mar 28 09:21:18 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:21:18 2025 - STDEXIT: 0
+Fri Mar 28 09:32:32 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:32:32 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:32:32 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:32:32 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:32:32 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:32:32 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:32:32 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:32:32 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:32:32 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:32:32 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:32:32 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:32:32 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:32:32 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:32:32 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:32:32 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:32:32 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:32:32 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:32:32 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:32:32 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:32:32 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:32:32 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:32:32 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:32:32 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:32:32 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:32:32 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:32:32 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:32:32 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:32:32 2025 - STDERR: "> Content-Length: 57"
+Fri Mar 28 09:32:32 2025 - STDERR: "> "
+Fri Mar 28 09:32:32 2025 - STDERR: "} [57 bytes data]"
+Fri Mar 28 09:32:32 2025 - STDERR: "* upload completely sent off: 57 bytes"
+Fri Mar 28 09:32:36 2025 - STDERR: "100    57    0     0  100    57      0     51  0:00:01  0:00:01 --:--:--    51100    57    0     0  100    57      0     26  0:00:02  0:00:02 --:--:--    26100    57    0     0  100    57      0     18  0:00:03  0:00:03 --:--:--    18100    57    0     0  100    57      0     14  0:00:04  0:00:03  0:00:01    14< HTTP/1.1 200 "
+Fri Mar 28 09:32:36 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:32:36 GMT"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:32:36 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:32:36 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:32:36 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:32:36 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:32:36 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:32:36 2025 - STDERR: "< "
+Fri Mar 28 09:32:36 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:32:36 2025 - STDERR: "100  1185    0  1128  100    57    285     14  0:00:04  0:00:03  0:00:01   299"
+Fri Mar 28 09:32:36 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:32:36 2025 - STDEXIT: 0
+Fri Mar 28 09:33:25 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:33:25 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:33:25 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:33:25 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:33:25 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:33:25 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:33:25 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:33:25 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:33:25 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:33:25 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:33:25 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:33:25 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:33:25 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:33:25 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:33:25 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:33:25 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:33:25 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:33:25 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:33:25 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:33:25 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:33:25 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:33:25 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:33:25 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:33:25 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:33:25 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:33:25 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:33:25 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:33:25 2025 - STDERR: "> Content-Length: 59"
+Fri Mar 28 09:33:25 2025 - STDERR: "> "
+Fri Mar 28 09:33:25 2025 - STDERR: "} [59 bytes data]"
+Fri Mar 28 09:33:25 2025 - STDERR: "* upload completely sent off: 59 bytes"
+Fri Mar 28 09:33:29 2025 - STDERR: "100    59    0     0  100    59      0     53  0:00:01  0:00:01 --:--:--    53100    59    0     0  100    59      0     28  0:00:02  0:00:02 --:--:--    28100    59    0     0  100    59      0     19  0:00:03  0:00:03 --:--:--    19< HTTP/1.1 200 "
+Fri Mar 28 09:33:29 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:33:29 GMT"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:33:29 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:33:29 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:33:29 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:33:29 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:33:29 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:33:29 2025 - STDERR: "< "
+Fri Mar 28 09:33:29 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:33:29 2025 - STDERR: "100  1187    0  1128  100    59    353     18  0:00:03  0:00:03 --:--:--   372"
+Fri Mar 28 09:33:29 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:33:29 2025 - STDEXIT: 0
+Fri Mar 28 09:34:34 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:34:34 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:34:34 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:34:34 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:34:34 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:34:34 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:34:34 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:34:34 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:34:34 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:34:34 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:34:34 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:34:34 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:34:34 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:34:34 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:34:34 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:34:34 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:34:34 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:34:34 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:34:34 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:34:34 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:34:34 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:34:34 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:34:34 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:34:34 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:34:34 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:34:34 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:34:34 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:34:34 2025 - STDERR: "> Content-Length: 50"
+Fri Mar 28 09:34:34 2025 - STDERR: "> "
+Fri Mar 28 09:34:34 2025 - STDERR: "} [50 bytes data]"
+Fri Mar 28 09:34:34 2025 - STDERR: "* upload completely sent off: 50 bytes"
+Fri Mar 28 09:34:40 2025 - STDERR: "100    50    0     0  100    50      0     45  0:00:01  0:00:01 --:--:--    45100    50    0     0  100    50      0     23  0:00:02  0:00:02 --:--:--    23100    50    0     0  100    50      0     16  0:00:03  0:00:03 --:--:--    16100    50    0     0  100    50      0     12  0:00:04  0:00:04 --:--:--    12100    50    0     0  100    50      0      9  0:00:05  0:00:05 --:--:--     9< HTTP/1.1 200 "
+Fri Mar 28 09:34:40 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:34:40 GMT"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:34:40 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:34:40 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:34:40 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:34:40 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:34:40 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:34:40 2025 - STDERR: "< "
+Fri Mar 28 09:34:40 2025 - STDERR: "{ [1221 bytes data]"
+Fri Mar 28 09:34:40 2025 - STDERR: "100  1264    0  1214  100    50    218      9  0:00:05  0:00:05 --:--:--   273"
+Fri Mar 28 09:34:40 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:34:40 2025 - STDEXIT: 0
+Fri Mar 28 09:36:41 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:36:41 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:36:41 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:36:41 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:36:41 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:36:41 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:36:41 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:36:41 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:36:41 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:36:41 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:36:41 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:36:41 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:36:41 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:36:41 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:36:41 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:36:41 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:36:41 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:36:41 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:36:41 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:36:41 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:36:41 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:36:41 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:36:41 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:36:41 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:36:41 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:36:41 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:36:41 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:36:41 2025 - STDERR: "> Content-Length: 45"
+Fri Mar 28 09:36:41 2025 - STDERR: "> "
+Fri Mar 28 09:36:41 2025 - STDERR: "} [45 bytes data]"
+Fri Mar 28 09:36:41 2025 - STDERR: "* upload completely sent off: 45 bytes"
+Fri Mar 28 09:36:45 2025 - STDERR: "100    45    0     0  100    45      0     39  0:00:01  0:00:01 --:--:--    39100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14< HTTP/1.1 200 "
+Fri Mar 28 09:36:45 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:36:44 GMT"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:36:45 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:36:45 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:36:45 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:36:45 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:36:45 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:36:45 2025 - STDERR: "< "
+Fri Mar 28 09:36:45 2025 - STDERR: "{ [1220 bytes data]"
+Fri Mar 28 09:36:45 2025 - STDERR: "100  1258    0  1213  100    45    333     12  0:00:03  0:00:03 --:--:--   345100  1258    0  1213  100    45    333     12  0:00:03  0:00:03 --:--:--   345"
+Fri Mar 28 09:36:45 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:36:45 2025 - STDEXIT: 0
+Fri Mar 28 09:48:02 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:48:02 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:48:06 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14100    45    0     0  100    45      0     10  0:00:04  0:00:04 --:--:--    10100  1258    0  1213  100    45    275     10  0:00:04  0:00:04 --:--:--   285"
+Fri Mar 28 09:48:06 2025 - STDEXIT: 0
+Fri Mar 28 09:50:53 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:50:53 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:50:57 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14100  1258    0  1213  100    45    330     12  0:00:03  0:00:03 --:--:--   342100  1258    0  1213  100    45    330     12  0:00:03  0:00:03 --:--:--   342"
+Fri Mar 28 09:50:57 2025 - STDEXIT: 0
+Fri Mar 28 09:52:03 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:52:03 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:52:06 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100  1258    0  1213  100    45    395     14  0:00:03  0:00:03 --:--:--   410100  1258    0  1213  100    45    395     14  0:00:03  0:00:03 --:--:--   410"
+Fri Mar 28 09:52:06 2025 - STDEXIT: 0
+Fri Mar 28 09:52:26 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:52:26 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:52:26 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:52:26 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:52:26 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:52:26 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:52:26 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:52:26 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:52:26 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:52:26 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:52:26 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:52:26 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:52:26 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:52:26 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:52:26 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:52:26 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:52:26 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:52:26 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:52:26 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:52:26 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:52:26 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:52:26 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:52:26 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:52:26 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:52:26 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:52:26 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:52:26 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:52:26 2025 - STDERR: "> Content-Length: 58"
+Fri Mar 28 09:52:26 2025 - STDERR: "> "
+Fri Mar 28 09:52:26 2025 - STDERR: "} [58 bytes data]"
+Fri Mar 28 09:52:26 2025 - STDERR: "* upload completely sent off: 58 bytes"
+Fri Mar 28 09:52:30 2025 - STDERR: "100    58    0     0  100    58      0     52  0:00:01  0:00:01 --:--:--    52100    58    0     0  100    58      0     27  0:00:02  0:00:02 --:--:--    27100    58    0     0  100    58      0     18  0:00:03  0:00:03 --:--:--    18< HTTP/1.1 200 "
+Fri Mar 28 09:52:30 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:52:30 GMT"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:52:30 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:52:30 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:52:30 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:52:30 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:52:30 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:52:30 2025 - STDERR: "< "
+Fri Mar 28 09:52:30 2025 - STDERR: "{ [1135 bytes data]"
+Fri Mar 28 09:52:30 2025 - STDERR: "100  1186    0  1128  100    58    276     14  0:00:04  0:00:04 --:--:--   290"
+Fri Mar 28 09:52:30 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:52:30 2025 - STDEXIT: 0
+Fri Mar 28 09:57:50 2025 - STDERR: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:57:50 2025 - STDERR: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:57:50 2025 - STDERR: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:57:50 2025 - STDERR: "* IPv6: (none)"
+Fri Mar 28 09:57:50 2025 - STDERR: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:57:50 2025 - STDERR: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:57:50 2025 - STDERR: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:57:50 2025 - STDERR: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:57:50 2025 - STDERR: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:57:50 2025 - STDERR: "} [324 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  CApath: none"
+Fri Mar 28 09:57:50 2025 - STDERR: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [89 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [4092 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [333 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [4 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:57:50 2025 - STDERR: "} [70 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:57:50 2025 - STDERR: "} [1 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:57:50 2025 - STDERR: "} [16 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [1 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:57:50 2025 - STDERR: "{ [16 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:57:50 2025 - STDERR: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:57:50 2025 - STDERR: "* Server certificate:"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:57:50 2025 - STDERR: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:57:50 2025 - STDERR: "*  SSL certificate verify ok."
+Fri Mar 28 09:57:50 2025 - STDERR: "* using HTTP/1.x"
+Fri Mar 28 09:57:50 2025 - STDERR: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:57:50 2025 - STDERR: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:57:50 2025 - STDERR: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:57:50 2025 - STDERR: "> Accept: */*"
+Fri Mar 28 09:57:50 2025 - STDERR: "> Content-Type: application/json"
+Fri Mar 28 09:57:50 2025 - STDERR: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:57:50 2025 - STDERR: "> use-case: local development assistance"
+Fri Mar 28 09:57:50 2025 - STDERR: "> Content-Length: 51"
+Fri Mar 28 09:57:50 2025 - STDERR: "> "
+Fri Mar 28 09:57:50 2025 - STDERR: "} [51 bytes data]"
+Fri Mar 28 09:57:50 2025 - STDERR: "* upload completely sent off: 51 bytes"
+Fri Mar 28 09:57:54 2025 - STDERR: "100    51    0     0  100    51      0     45  0:00:01  0:00:01 --:--:--    45100    51    0     0  100    51      0     24  0:00:02  0:00:02 --:--:--    24100    51    0     0  100    51      0     16  0:00:03  0:00:03 --:--:--    16< HTTP/1.1 200 "
+Fri Mar 28 09:57:54 2025 - STDERR: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Date: Fri, 28 Mar 2025 13:57:54 GMT"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Expires: 0"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Pragma: no-cache"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Vary: Origin"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:57:54 2025 - STDERR: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:57:54 2025 - STDERR: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:57:54 2025 - STDERR: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:57:54 2025 - STDERR: "< transfer-encoding: chunked"
+Fri Mar 28 09:57:54 2025 - STDERR: "< Connection: keep-alive"
+Fri Mar 28 09:57:54 2025 - STDERR: "< "
+Fri Mar 28 09:57:54 2025 - STDERR: "{ [1220 bytes data]"
+Fri Mar 28 09:57:54 2025 - STDERR: "100  1264    0  1213  100    51    359     15  0:00:03  0:00:03 --:--:--   374100  1264    0  1213  100    51    359     15  0:00:03  0:00:03 --:--:--   374"
+Fri Mar 28 09:57:54 2025 - STDERR: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:57:54 2025 - STDEXIT: 0
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "* IPv6: (none)"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "* IPv4: 100.64.1.7"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "} [324 bytes data]"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 09:59:27 2025 - Entered on_stderr
+Fri Mar 28 09:59:27 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:27 2025 - STDERR DATA: "*  CApath: none"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [89 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [4092 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [333 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [4 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "} [70 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "} [1 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "} [16 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [1 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "{ [16 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* Server certificate:"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "*  SSL certificate verify ok."
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* using HTTP/1.x"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> User-Agent: curl/8.7.1"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> Accept: */*"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> Content-Type: application/json"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> use-case: local development assistance"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> Content-Length: 46"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "> "
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "} [46 bytes data]"
+Fri Mar 28 09:59:28 2025 - Entered on_stderr
+Fri Mar 28 09:59:28 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:28 2025 - STDERR DATA: "* upload completely sent off: 46 bytes"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "100    46    0     0  100    46      0     41  0:00:01  0:00:01 --:--:--    41100    46    0     0  100    46      0     21  0:00:02  0:00:02 --:--:--    21100    46    0     0  100    46      0     14  0:00:03  0:00:03 --:--:--    14100    46    0     0  100    46      0     11  0:00:04  0:00:04 --:--:--    11100    46    0     0  100    46      0      8  0:00:05  0:00:05 --:--:--     8100    46    0     0  100    46      0      7  0:00:06  0:00:06 --:--:--     0100    46    0     0  100    46      0      6  0:00:07  0:00:07 --:--:--     0< HTTP/1.1 200 "
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Date: Fri, 28 Mar 2025 13:59:35 GMT"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Expires: 0"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Pragma: no-cache"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Vary: Origin"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< transfer-encoding: chunked"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< Connection: keep-alive"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "< "
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "{ [1220 bytes data]"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "100  1259    0  1213  100    46    165      6  0:00:07  0:00:07 --:--:--   288"
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 09:59:35 2025 - Entered on_stdout
+Fri Mar 28 09:59:35 2025 - STDOUT ERR: nil
+Fri Mar 28 09:59:35 2025 - STDOUT DATA: '{"choices":[{"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"protected_material_code":{"filtered":false,"detected":false},"protected_material_text":{"filtered":false,"detected":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}},"finish_reason":"stop","index":0,"message":{"content":"Hello! How can I assist you today?","refusal":null,"role":"assistant"}}],"created":1743170369,"id":"chatcmpl-BG4X3BsU7iMhj4FIQNccvL75atsTS","model":"o1-preview-2024-09-12","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"filtered":false,"detected":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"system_fingerprint":"fp_772cb6e46d","usage":{"completion_tokens":213,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":192,"rejected_prediction_tokens":0},"prompt_tokens":9,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":222}}'
+Fri Mar 28 09:59:35 2025 - Entered on_stderr
+Fri Mar 28 09:59:35 2025 - STDERR ERR: nil
+Fri Mar 28 09:59:35 2025 - STDERR DATA: nil
+Fri Mar 28 09:59:35 2025 - STDEXIT: 0
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* IPv6: (none)"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* IPv4: 100.64.1.7"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "} [324 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  CApath: none"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [89 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [4092 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [333 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [4 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "} [70 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "} [1 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "} [16 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [1 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "{ [16 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* Server certificate:"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "*  SSL certificate verify ok."
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* using HTTP/1.x"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> User-Agent: curl/8.7.1"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> Accept: */*"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> Content-Type: application/json"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> use-case: local development assistance"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> Content-Length: 45"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "> "
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "} [45 bytes data]"
+Fri Mar 28 10:03:16 2025 - Entered on_stderr
+Fri Mar 28 10:03:16 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:16 2025 - STDERR DATA: "* upload completely sent off: 45 bytes"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14100    45    0     0  100    45      0     10  0:00:04  0:00:04 --:--:--    10100    45    0     0  100    45      0      8  0:00:05  0:00:05 --:--:--     8< HTTP/1.1 200 "
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Date: Fri, 28 Mar 2025 14:03:22 GMT"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Expires: 0"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Pragma: no-cache"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Vary: Origin"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< transfer-encoding: chunked"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< Connection: keep-alive"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "< "
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "{ [1220 bytes data]"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "100  1258    0  1213  100    45    215      7  0:00:06  0:00:05  0:00:01   267"
+Fri Mar 28 10:03:22 2025 - Entered on_stderr
+Fri Mar 28 10:03:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:03:22 2025 - STDERR DATA: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 10:03:22 2025 - STDEXIT: 0
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* IPv6: (none)"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* IPv4: 100.64.1.7"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "} [324 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  CApath: none"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [89 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [4092 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [333 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [4 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "} [70 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "} [1 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "} [16 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [1 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "{ [16 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* Server certificate:"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "*  SSL certificate verify ok."
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* using HTTP/1.x"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> User-Agent: curl/8.7.1"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> Accept: */*"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> Content-Type: application/json"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> use-case: local development assistance"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> Content-Length: 45"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "> "
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "} [45 bytes data]"
+Fri Mar 28 10:04:18 2025 - Entered on_stderr
+Fri Mar 28 10:04:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:18 2025 - STDERR DATA: "* upload completely sent off: 45 bytes"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "100    45    0     0  100    45      0     39  0:00:01  0:00:01 --:--:--    39100    45    0     0  100    45      0     20  0:00:02  0:00:02 --:--:--    20100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14< HTTP/1.1 200 "
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Date: Fri, 28 Mar 2025 14:04:21 GMT"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Expires: 0"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Pragma: no-cache"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Vary: Origin"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< transfer-encoding: chunked"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< Connection: keep-alive"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "< "
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "{ [1220 bytes data]"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "100  1258    0  1213  100    45    371     13  0:00:03  0:00:03 --:--:--   385"
+Fri Mar 28 10:04:21 2025 - Entered on_stderr
+Fri Mar 28 10:04:21 2025 - STDERR ERR: nil
+Fri Mar 28 10:04:21 2025 - STDERR DATA: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 10:04:21 2025 - STDEXIT: 0
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* IPv6: (none)"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* IPv4: 100.64.1.7"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "} [324 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  CApath: none"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [89 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [4092 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [333 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [4 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "} [70 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "} [1 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "} [16 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [1 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "{ [16 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* Server certificate:"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "*  SSL certificate verify ok."
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* using HTTP/1.x"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> User-Agent: curl/8.7.1"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> Accept: */*"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> Content-Type: application/json"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> use-case: local development assistance"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> Content-Length: 67"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "> "
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "} [67 bytes data]"
+Fri Mar 28 10:07:18 2025 - Entered on_stderr
+Fri Mar 28 10:07:18 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:18 2025 - STDERR DATA: "* upload completely sent off: 67 bytes"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "100    67    0     0  100    67      0     59  0:00:01  0:00:01 --:--:--    59100    67    0     0  100    67      0     31  0:00:02  0:00:02 --:--:--    31100    67    0     0  100    67      0     21  0:00:03  0:00:03 --:--:--    21< HTTP/1.1 200 "
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Date: Fri, 28 Mar 2025 14:07:21 GMT"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Expires: 0"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Pragma: no-cache"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Vary: Origin"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< transfer-encoding: chunked"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< Connection: keep-alive"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "< "
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "{ [1135 bytes data]"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "100  1195    0  1128  100    67    294     17  0:00:03  0:00:03 --:--:--   311100  1195    0  1128  100    67    294     17  0:00:03  0:00:03 --:--:--   311"
+Fri Mar 28 10:07:22 2025 - Entered on_stderr
+Fri Mar 28 10:07:22 2025 - STDERR ERR: nil
+Fri Mar 28 10:07:22 2025 - STDERR DATA: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 10:07:22 2025 - STDEXIT: 0
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cortex.aws.lmig.com:443 was resolved."
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* IPv6: (none)"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* IPv4: 100.64.1.7"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*   Trying 100.64.1.7:443..."
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* Connected to cortex.aws.lmig.com (100.64.1.7) port 443"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* ALPN: curl offers h2,http/1.1"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* (304) (OUT), TLS handshake, Client hello (1):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "} [324 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  CAfile: /Users/Shared/.certificates/zscaler.pem"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  CApath: none"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* (304) (IN), TLS handshake, Server hello (2):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [89 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Certificate (11):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [4092 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server key exchange (12):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [333 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Server finished (14):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [4 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "} [70 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "} [1 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (OUT), TLS handshake, Finished (20):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "} [16 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [1 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* TLSv1.2 (IN), TLS handshake, Finished (20):"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "{ [16 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* ALPN: server did not agree on a protocol. Uses default."
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* Server certificate:"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  subject: C=US; ST=New Hampshire; L=Portsmouth; O=Liberty Mutual Group; CN=cortex.aws.lmig.com"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  start date: Jul  4 13:36:33 2024 GMT"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  expire date: Jul  4 13:36:31 2025 GMT"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  subjectAltName: host \"cortex.aws.lmig.com\" matched cert's \"cortex.aws.lmig.com\""
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "*  SSL certificate verify ok."
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* using HTTP/1.x"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> POST /rest/v2/azure/openai/deployments/o1-preview-2024-09-12/chat/completions?api-version=2024-10-21 HTTP/1.1"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> Host: cortex.aws.lmig.com"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> User-Agent: curl/8.7.1"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> Accept: */*"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> Content-Type: application/json"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> Authorization: Bearer ctx_gFt3vQCshn3uobnHZibuC-LTwflkX1TjEWb"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> use-case: local development assistance"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> Content-Length: 45"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "> "
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "} [45 bytes data]"
+Fri Mar 28 10:10:35 2025 - Entered on_stderr
+Fri Mar 28 10:10:35 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:35 2025 - STDERR DATA: "* upload completely sent off: 45 bytes"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "100    45    0     0  100    45      0     40  0:00:01  0:00:01 --:--:--    40100    45    0     0  100    45      0     21  0:00:02  0:00:02 --:--:--    21100    45    0     0  100    45      0     14  0:00:03  0:00:03 --:--:--    14< HTTP/1.1 200 "
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Cache-Control: no-cache, no-store, max-age=0, must-revalidate"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Content-Type: application/json;charset=UTF-8"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Date: Fri, 28 Mar 2025 14:10:38 GMT"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Expires: 0"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Pragma: no-cache"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Strict-Transport-Security: max-age=31536000 ; includeSubDomains"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Vary: Origin"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Vary: Access-Control-Request-Method"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Vary: Access-Control-Request-Headers"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< X-Content-Type-Options: nosniff"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< X-Frame-Options: SAMEORIGIN"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< X-XSS-Protection: 1; mode=block"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< transfer-encoding: chunked"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< Connection: keep-alive"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "< "
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "{ [1220 bytes data]"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "100  1258    0  1213  100    45    374     13  0:00:03  0:00:03 --:--:--   388"
+Fri Mar 28 10:10:38 2025 - Entered on_stderr
+Fri Mar 28 10:10:38 2025 - STDERR ERR: nil
+Fri Mar 28 10:10:38 2025 - STDERR DATA: "* Connection #0 to host cortex.aws.lmig.com left intact"
+Fri Mar 28 10:10:38 2025 - STDEXIT: 0
+Fri Mar 28 10:16:05 2025 - Entered on_stderr
+Fri Mar 28 10:16:05 2025 - STDERR ERR: nil
+Fri Mar 28 10:16:05 2025 - STDERR DATA: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+Fri Mar 28 10:16:05 2025 - Entered on_stderr
+Fri Mar 28 10:16:05 2025 - STDERR ERR: nil
+Fri Mar 28 10:16:05 2025 - STDERR DATA: "                                 Dload  Upload   Total   Spent    Left  Speed"
+Fri Mar 28 10:16:09 2025 - Entered on_stderr
+Fri Mar 28 10:16:09 2025 - STDERR ERR: nil
+Fri Mar 28 10:16:09 2025 - STDERR DATA: "  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    57    0     0  100    57      0     51  0:00:01  0:00:01 --:--:--    51100    57    0     0  100    57      0     26  0:00:02  0:00:02 --:--:--    26100    57    0     0  100    57      0     18  0:00:03  0:00:03 --:--:--    18100  1185    0  1128  100    57    289     14  0:00:04  0:00:03  0:00:01   304100  1185    0  1128  100    57    289     14  0:00:04  0:00:03  0:00:01   304"
+Fri Mar 28 10:16:09 2025 - STDEXIT: 0
+Fri Mar 28 10:24:18 2025 - STDEXIT: 0
